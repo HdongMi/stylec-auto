@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20 17:33:06",
+ "updated_at": "2026-10-20 17:49:47",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -454,6 +454,24 @@
    "title": "[인스타그램] 여배우크림, 멜라토닌 크림 50g&25g",
    "url": "https://www.stylec.co.kr/trials/152801",
    "image": "https://cdn.stylec.co.kr/data/editors/1791944558220.jpg"
+  },
+  {
+   "at": "2026-10-20 17:38:59",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[퓨리영] 피디알엔 바이옴 리페어크림 피부과&에스테틱화장품",
+   "url": "https://www.stylec.co.kr/trials/154631",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782097095664.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-20 17:49:47",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "베이비드래곤 오벌형 뿔테안경 EDDY  근적외선 + 블루라이트차단 무료 장착",
+   "url": "https://www.stylec.co.kr/trials/152844",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1787484885099.jpg",
+   "img_checked": true
   }
  ]
 }
