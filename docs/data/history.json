@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20 16:51:21",
+ "updated_at": "2026-10-20 17:33:06",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -406,6 +406,54 @@
    "title": "빛으로 완성하는 공간의 무드, 번개표 웰컴라이트 ☆",
    "url": "https://www.stylec.co.kr/trials/148938",
    "image": ""
+  },
+  {
+   "at": "2026-10-20 17:28:45",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "빛으로 완성하는 공간의 무드, 번개표 웰컴라이트 ☆",
+   "url": "https://www.stylec.co.kr/trials/148938",
+   "image": "https://cdn.stylec.co.kr/data/editors/1790146801924.png"
+  },
+  {
+   "at": "2026-10-20 17:29:54",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[봉봉프렌즈] 천연유래성분 어린이 화장품세트_홀리데이 메이크업박스세트",
+   "url": "https://www.stylec.co.kr/trials/154560",
+   "image": "https://cdn.stylec.co.kr/data/editors/1792397047085.jpg"
+  },
+  {
+   "at": "2026-10-20 17:30:08",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] 빛으로 완성하는 공간의 무드, 번개표 웰컴라이트 ☆",
+   "url": "https://www.stylec.co.kr/trials/148936",
+   "image": "https://cdn.stylec.co.kr/data/editors/1790146801924.png"
+  },
+  {
+   "at": "2026-10-20 17:30:48",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "커피의 경험은 남기고 카페인은 ZERO! 클레드브루 블랙",
+   "url": "https://www.stylec.co.kr/trials/148019",
+   "image": "https://cdn.stylec.co.kr/data/editors/1785465284394.png"
+  },
+  {
+   "at": "2026-10-20 17:31:11",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "드시모네 키즈요거트 플레인",
+   "url": "https://www.stylec.co.kr/trials/151036",
+   "image": "https://cdn.stylec.co.kr/data/editors/1776404430512.jpg"
+  },
+  {
+   "at": "2026-10-20 17:33:06",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[인스타그램] 여배우크림, 멜라토닌 크림 50g&25g",
+   "url": "https://www.stylec.co.kr/trials/152801",
+   "image": "https://cdn.stylec.co.kr/data/editors/1791944558220.jpg"
   }
  ]
 }
