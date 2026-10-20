@@ -2,8 +2,11 @@
 session.json
 session_b64.txt
 stylec_profile/
+musinsa_login.json
+musinsa_session_b64.txt
 
 # 내 컴퓨터 실행 결과물
 applied_log.json
 screenshots/
+logs/
 __pycache__/
