@@ -16,6 +16,7 @@
 
 import argparse
 import base64
+import gzip
 import json
 import os
 import random
@@ -524,9 +525,17 @@ def main():
                 print("로그인되어 있지 않습니다. 먼저 python stylec_auto.py --login 으로 로그인하세요.")
                 return finish(1)
             state = ctx.storage_state()
-            raw = json.dumps(state, ensure_ascii=False).encode("utf-8")
-            Path("session_b64.txt").write_text(base64.b64encode(raw).decode("ascii"), encoding="ascii")
-            print("로그인 상태를 session_b64.txt 로 내보냈습니다.")
+            # 스타일씨 로그인에 필요한 것만 남김 (카카오·광고 등 다른 사이트 쿠키 제외) → 시크릿 크기 제한(48KB) 대응
+            state = {
+                "cookies": [c for c in state.get("cookies", []) if "stylec" in c.get("domain", "")],
+                "origins": [o for o in state.get("origins", []) if "stylec" in o.get("origin", "")],
+            }
+            raw = json.dumps(state, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+            packed = base64.b64encode(gzip.compress(raw, mtime=0)).decode("ascii")
+            Path("session_b64.txt").write_text(packed, encoding="ascii")
+            print(f"로그인 상태를 session_b64.txt 로 내보냈습니다. (쿠키 {len(state['cookies'])}개, {len(packed) / 1024:.1f}KB)")
+            if len(packed) > 48 * 1024:
+                print("※ 48KB를 넘어 GitHub 시크릿에 들어가지 않습니다. 이 메시지를 그대로 알려주세요.")
             print("이 파일 내용 전체를 GitHub 저장소 Settings > Secrets > Actions 의 STYLEC_SESSION 에 붙여넣으세요.")
             print("※ 이 파일은 계정 열쇠와 같습니다. 다른 사람에게 보내거나 저장소에 올리지 마세요.")
             return finish()
