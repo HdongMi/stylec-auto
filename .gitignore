@@ -1,0 +1,9 @@
+# 계정·인증 정보 — 절대 올리지 마세요
+session.json
+session_b64.txt
+stylec_profile/
+
+# 내 컴퓨터 실행 결과물
+applied_log.json
+screenshots/
+__pycache__/
