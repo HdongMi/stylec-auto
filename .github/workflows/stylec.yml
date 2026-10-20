@@ -45,7 +45,10 @@ jobs:
             echo "::error::STYLEC_SESSION 시크릿이 없습니다. README 2·4단계를 확인하세요."
             exit 1
           fi
-          echo "$STYLEC_SESSION" | base64 -d > session.json
+          echo "$STYLEC_SESSION" | base64 -d > session.bin
+          # 압축된 값(새 방식)과 압축 안 된 값(예전 방식) 모두 지원
+          if gzip -t session.bin 2>/dev/null; then gunzip -c session.bin > session.json; else mv session.bin session.json; fi
+          rm -f session.bin
 
       - name: 체험단 신청
         run: >
