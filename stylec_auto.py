@@ -395,6 +395,56 @@ def fill_form(page, message):
     return empty_required
 
 
+def page_product_image(page):
+    """상세 페이지의 대표 제품 이미지 주소. og:image 를 우선 쓰고, 없거나 사이트 공통 이미지면 본문에서 가장 큰 사진."""
+    try:
+        return page.evaluate(
+            """() => {
+                const bad = s => !s || s.startsWith('data:') || /\\.svg|\\/ui\\/|banner|logo|icon|ico_|profile|avatar/i.test(s);
+                const og = document.querySelector('meta[property="og:image"]')?.content;
+                if (og && !bad(og)) return new URL(og, location.href).href;
+                let best = '', area = 0;
+                for (const img of document.images) {
+                    const src = img.currentSrc || img.src;
+                    if (bad(src)) continue;
+                    const r = img.getBoundingClientRect();
+                    if (r.width < 150 || r.height < 150) continue;
+                    const a = (img.naturalWidth || r.width) * (img.naturalHeight || r.height);
+                    if (a > area) { area = a; best = src; }
+                }
+                return best;
+            }"""
+        ) or ""
+    except Exception:
+        return ""
+
+
+def backfill_images(page, hist, path, limit=80):
+    """이미지가 확인되지 않은 기록의 상세 페이지를 열어 제품 이미지를 채움 (한 번 확인한 기록은 다시 안 봄)."""
+    todo = [r for r in hist["records"] if not r.get("img_checked") and r.get("url", "").startswith(BASE)][:limit]
+    if not todo:
+        return
+    print(f"\n[썸네일] 기록 {len(todo)}개의 제품 이미지를 가져옵니다")
+    found = 0
+    for r in todo:
+        try:
+            page.goto(r["url"], wait_until="domcontentloaded", timeout=20000)
+            try:
+                page.wait_for_load_state("networkidle", timeout=8000)
+            except PWTimeout:
+                pass
+            img = page_product_image(page)
+            if img:
+                r["image"] = img
+                found += 1
+        except Exception as e:
+            print(f"  ※ {r['url']} 이미지 실패: {str(e).splitlines()[0][:60]}")
+        r["img_checked"] = True
+        human_pause(1.0, 0.3)
+    save_history(path, hist)
+    print(f"[썸네일] {found}개 채움")
+
+
 def apply_one(page, camp, args):
     page.goto(camp["url"], wait_until="domcontentloaded")
     try:
@@ -404,6 +454,10 @@ def apply_one(page, camp, args):
     human_pause(1.0)
 
     body = page.inner_text("body")
+    img = page_product_image(page)
+    if img:
+        camp["image"] = img
+    camp["img_checked"] = True
     if not camp["title"]:
         camp["title"] = (page.title() or "")[:120]
 
@@ -594,7 +648,8 @@ def main():
                 if args.history and st != "skip":  # 건너뛴 건(마감·유형 다름 등)은 기록하지 않음
                     hist["records"].append({"at": now_kst(), "status": st, "result": result,
                                             "title": camp["title"], "url": camp["url"],
-                                            "image": camp.get("image", "")})
+                                            "image": camp.get("image", ""),
+                                            "img_checked": camp.get("img_checked", False)})
                     save_history(args.history, hist)  # 중간에 끊겨도 기록이 남도록 매번 저장
             if result.startswith(("ok", "dry-run")):
                 done += 1
@@ -603,6 +658,8 @@ def main():
         print(f"\n요약: 신청 {run['ok']} · 확인 필요 {run['check']} · 수동 필요 {run['manual']}"
               f" · 실패 {run['fail']} · 건너뜀 {run['skip']} (목록 {len(campaigns)}개)")
         close_run("success")
+        if args.apply and args.history:
+            backfill_images(page, hist, args.history)
         finish()
 
 

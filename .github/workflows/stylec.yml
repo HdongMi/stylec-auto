@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
+      PYTHONUNBUFFERED: "1" # 진행 상황이 로그에 실시간으로 보이도록
       # 신청서 빈칸에 들어갈 문구 — 원하는 대로 수정하세요
       APPLY_MESSAGE: "제품에 관심이 많아 꼼꼼하고 정성스럽게 리뷰 작성하겠습니다."
       # 제외할 키워드(쉼표 구분). 예: "인스타,릴스,유튜브"
