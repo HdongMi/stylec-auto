@@ -226,10 +226,22 @@
   .site-meta { font-size: 13px; color: var(--sub); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .site-meta.bad { color: var(--red); font-weight: 600; }
   .opt { color: var(--sub); margin-left: 6px; }
+  .live-line strong { color: var(--blue); }
+  .progress { height: 8px; border-radius: 4px; background: var(--seg); margin-top: 12px; overflow: hidden; }
+  .progress span { display: block; height: 100%; border-radius: 4px; background: var(--blue); transition: width .6s ease; }
+  .live-now { margin-top: 8px; font-size: 13px; color: var(--sub); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .live-dot {
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--blue);
+    margin-right: 6px; vertical-align: 2px; animation: blink 1.4s ease-in-out infinite;
+  }
+  @keyframes blink { 50% { opacity: .25; } }
+  .site-meta.live { color: var(--blue); font-weight: 600; }
+  .chip.live { background: var(--blue); color: #fff; }
   .alert + .alert { margin-top: -4px; }
 
   @media (prefers-reduced-motion: reduce) {
-    .bar-fill, .row { transition: none; }
+    .bar-fill, .row, .progress span { transition: none; }
+    .live-dot { animation: none; }
   }
 </style>
 </head>
@@ -299,6 +311,17 @@
     musinsa: { name: "무신사",   file: "data/musinsa.json", mark: "무", color: "var(--text)", fg: "var(--surface)",
                secret: "MUSINSA_SESSION", cmd: "python musinsa_preuser.py --export-session" },
   };
+  // 실시간 진행 파일: 실행 중 15초마다 live-<사이트> 브랜치에 올라옴
+  const REPO = (() => {
+    const h = location.hostname;
+    if (h.endsWith(".github.io")) return `${h.split(".")[0]}/${location.pathname.split("/")[1]}`;
+    return "";                                        // 로컬 미리보기에서는 data/live-<사이트>.json
+  })();
+  const liveUrl = (k) => (REPO
+    ? `https://raw.githubusercontent.com/${REPO}/live-${k}/live.json?t=${Date.now()}`
+    : `data/live-${k}.json?t=${Date.now()}`);
+  const LIVE_STALE_MIN = 10;                          // 이보다 오래 갱신이 없으면 멈춘 것으로 봄
+
   const STATUS = {
     ok: "신청 완료",
     check: "제출함, 확인 필요",
@@ -310,6 +333,7 @@
     login_expired: ["로그인 만료", "bad"],
     no_list: ["목록 못 불러옴", "bad"],
     running: ["중간에 멈춤", "mid"],
+    live: ["진행 중", "live"],
   };
   const TINTS = [
     ["#E8F3FF", "#3182F6"], ["#FFF3E0", "#F57800"], ["#E5F8EE", "#03A55D"],
@@ -378,7 +402,33 @@
     requestAnimationFrame(tick);
   }
 
-  const DATA = {};                      // 사이트별 { runs, records, updated_at, missing }
+  const BASE = {};                      // 사이트별 저장된 기록 { runs, records, updated_at, missing }
+  const LIVE = {};                      // 사이트별 실행 중 진행 상황
+  const DATA = {};                      // 둘을 합친 화면용 데이터
+
+  const minsAgo = (at) => (kstNow() - new Date(at.replace(" ", "T") + "Z")) / 60e3;
+  const isLive = (k) => {
+    const l = LIVE[k];
+    return !!(l && l.status === "running" && l.updated_at && minsAgo(l.updated_at) < LIVE_STALE_MIN);
+  };
+
+  function rebuild(k) {
+    const b = BASE[k] || { runs: [], records: [], missing: true };
+    const l = LIVE[k];
+    const d = { runs: b.runs.slice(), records: b.records.slice(), updated_at: b.updated_at, missing: b.missing && !l };
+    if (l && l.run && l.started_at) {
+      const seen = new Set(d.records.map((r) => r.url + "|" + r.at));
+      for (const r of l.records || []) {
+        if (r.status !== "skip" && !seen.has(r.url + "|" + r.at)) d.records.push(r);
+      }
+      d.records.sort((x, y) => (x.at < y.at ? -1 : x.at > y.at ? 1 : 0));
+      if (!d.runs.some((r) => r.started_at === l.started_at)) {
+        d.runs.push({ ...l.run, status: isLive(k) ? "live" : (l.status === "running" ? "running" : l.status) });
+      }
+      if (l.updated_at && (!d.updated_at || l.updated_at > d.updated_at)) d.updated_at = l.updated_at;
+    }
+    DATA[k] = d;
+  }
   let cur = "stylec", filter = "all", shown = PAGE, animated = {};
 
   const D = () => DATA[cur] || { runs: [], records: [], missing: true };
@@ -405,15 +455,27 @@
   function renderSites() {
     const t = todayKST();
     $("sites").innerHTML = Object.entries(SITES).map(([k, site]) => {
-      let meta, bad = false;
-      if (!connected(k)) meta = "연결 전";
+      let meta, bad = false, live = false;
+      if (isLive(k)) { const l = LIVE[k]; meta = l.total ? `신청 중 ${Math.min(l.done, l.total)}/${l.total}` : "신청 준비 중"; live = true; }
+      else if (!connected(k)) meta = "연결 전";
       else if (["login_expired", "no_list"].includes(lastRun(k)?.status)) { meta = RUN_STATUS[lastRun(k).status][0]; bad = true; }
       else meta = `오늘 ${countOn(k, t)}개`;
       return `<button class="site" role="tab" data-site="${k}" aria-selected="${k === cur}">
         <span class="site-mark" style="background:${site.color};color:${site.fg || "#fff"}" aria-hidden="true">${site.mark}</span>
         <span class="site-text"><span class="site-name">${site.name}</span>
-          <span class="site-meta ${bad ? "bad" : ""}">${esc(meta)}</span></span></button>`;
+          <span class="site-meta ${bad ? "bad" : live ? "live" : ""}">${esc(meta)}</span></span></button>`;
     }).join("");
+  }
+
+  function liveLine(k) {
+    const l = LIVE[k], total = l.total || 0, done = Math.min(l.done || 0, total);
+    const pct = total ? Math.round((done / total) * 100) : 4;
+    const head = total
+      ? `<span class="live-dot" aria-hidden="true"></span><strong>지금 신청하는 중이에요</strong>, ${total}개 중 ${done}개 확인했어요`
+      : `<span class="live-dot" aria-hidden="true"></span><strong>지금 신청을 시작했어요</strong>, 체험단 목록을 불러오고 있어요`;
+    const now = l.current && total ? `<div class="live-now">지금 보는 체험단: ${esc(l.current)}</div>` : "";
+    return `<div class="live-line">${head}</div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${done}"><span style="width:${pct}%"></span></div>${now}`;
   }
 
   function renderHero() {
@@ -436,7 +498,7 @@
       } else {
         h.innerHTML = total ? `${esc(site.name)}에서 오늘은<br>아직 신청한 게 없어요` : `${esc(site.name)} 신청 기록이<br>아직 없어요`;
       }
-      $("next").innerHTML = nextRun();
+      $("next").innerHTML = isLive(cur) ? liveLine(cur) : nextRun();
     }
 
     $("s-total").innerHTML = `${total}<small>개</small>`;
@@ -578,9 +640,12 @@
   Promise.all(Object.entries(SITES).map(([k, site]) =>
     fetch(site.file + "?ts=" + Date.now(), { cache: "no-store" })
       .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then((d) => { DATA[k] = { runs: d.runs || [], records: (d.records || []).filter((r) => r.status !== "skip"), updated_at: d.updated_at }; })
-      .catch(() => { DATA[k] = { runs: [], records: [], missing: true }; })
+      .then((d) => { BASE[k] = { runs: d.runs || [], records: (d.records || []).filter((r) => r.status !== "skip"), updated_at: d.updated_at }; })
+      .catch(() => { BASE[k] = { runs: [], records: [], missing: true }; })
+      .then(() => fetchLive(k))
+      .then(() => rebuild(k))
   )).then(() => {
+    liveTimer = setTimeout(pollLive, Object.keys(SITES).some(isLive) ? 15e3 : 60e3);
     if (Object.keys(SITES).every((k) => DATA[k].missing)) {
       $("headline").classList.remove("skeleton");
       $("headline").textContent = "기록을 불러오지 못했어요";
@@ -590,7 +655,30 @@
     renderAll();
   });
 
-  setInterval(() => { if (connected(cur)) $("next").innerHTML = nextRun(); }, 60e3);
+  setInterval(() => { if (connected(cur) && !isLive(cur)) $("next").innerHTML = nextRun(); }, 60e3);
+
+  // 실시간 진행 상황: 실행 중이면 15초, 아니면 1분마다 확인 (탭이 안 보이면 쉼)
+  async function fetchLive(k) {
+    try {
+      const r = await fetch(liveUrl(k), { cache: "no-store" });
+      if (!r.ok) return false;
+      const l = await r.json();
+      const changed = JSON.stringify(l) !== JSON.stringify(LIVE[k]);
+      LIVE[k] = l;
+      return changed;
+    } catch (e) { return false; }
+  }
+  let liveTimer = null;
+  async function pollLive() {
+    clearTimeout(liveTimer);
+    if (!document.hidden) {
+      const changed = (await Promise.all(Object.keys(SITES).map(fetchLive))).some(Boolean);
+      if (changed) { Object.keys(SITES).forEach(rebuild); renderAll(); }
+    }
+    const anyLive = Object.keys(SITES).some(isLive);
+    liveTimer = setTimeout(pollLive, anyLive ? 15e3 : 60e3);
+  }
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) pollLive(); });
 })();
 </script>
 </body>
