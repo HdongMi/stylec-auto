@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>체험단 자동 신청</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --bg: #F2F4F6;
+    --surface: #FFFFFF;
+    --text: #191F28;
+    --sub: #6B7684;
+    --faint: #B0B8C1;
+    --line: #E5E8EB;
+    --press: #F2F4F6;
+    --blue: #3182F6;
+    --blue-soft: #E8F3FF;
+    --bar: #C9E2FF;
+    --orange: #F57800;
+    --orange-soft: #FFF3E0;
+    --red: #F04452;
+    --red-soft: #FFEEEE;
+    --seg: #F2F4F6;
+    --seg-on: #FFFFFF;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101013;
+      --surface: #1C1C21;
+      --text: #F2F4F6;
+      --sub: #9E9EA6;
+      --faint: #5E5E66;
+      --line: #2C2C34;
+      --press: #26262D;
+      --blue: #4E95F8;
+      --blue-soft: #1D2B40;
+      --bar: #27405F;
+      --orange: #FF9B2E;
+      --orange-soft: #3A2A16;
+      --red: #FF5A66;
+      --red-soft: #3A1E22;
+      --seg: #26262D;
+      --seg-on: #3A3A43;
+      color-scheme: dark;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+  }
+  .num { font-variant-numeric: tabular-nums; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 8px; }
+
+  .app { max-width: 600px; margin: 0 auto; padding-bottom: 40px; }
+
+  /* 상단 바 */
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px 10px;
+  }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; }
+  .brand-mark {
+    width: 26px; height: 26px; border-radius: 8px; background: var(--blue);
+    display: grid; place-items: center;
+  }
+  .brand-mark svg { width: 16px; height: 16px; }
+  .updated { color: var(--sub); font-size: 13px; }
+
+  /* 섹션: 회색 바탕 위에 흰 면이 쌓이는 구조 */
+  .sec { background: var(--surface); padding: 24px 20px; margin-top: 12px; }
+  .sec:first-of-type { margin-top: 0; }
+  @media (min-width: 600px) {
+    .app { padding: 12px 0 48px; }
+    .sec { border-radius: 24px; margin: 12px 12px 0; }
+  }
+  .sec-title { font-size: 20px; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.02em; }
+
+  /* 경고 배너 */
+  .alert {
+    display: none; margin: 0 20px 12px; padding: 14px 16px; border-radius: 16px;
+    background: var(--red-soft); color: var(--red); font-weight: 600; font-size: 14px;
+  }
+  .alert p { margin: 4px 0 0; font-weight: 500; color: var(--text); opacity: .8; }
+  @media (min-width: 600px) { .alert { margin: 0 12px 12px; } }
+
+  /* 히어로 */
+  .hero h1 {
+    font-size: 28px; line-height: 1.32; font-weight: 700; letter-spacing: -0.03em;
+    margin: 0;
+  }
+  .hero h1 .count { color: var(--blue); }
+  .next {
+    margin-top: 10px; color: var(--sub); font-size: 15px;
+  }
+  .next strong { color: var(--text); font-weight: 600; }
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line);
+  }
+  .stat + .stat { padding-left: 16px; border-left: 1px solid var(--line); }
+  .stat-label { color: var(--sub); font-size: 13px; }
+  .stat-value { font-size: 22px; font-weight: 700; margin-top: 2px; letter-spacing: -0.02em; }
+  .stat-value small { font-size: 15px; font-weight: 600; margin-left: 1px; }
+  .stat.warn .stat-value { color: var(--orange); }
+
+  /* 차트 */
+  .chart {
+    display: flex; align-items: flex-end; gap: 6px; height: 148px; padding-top: 24px;
+  }
+  .bar {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+    height: 100%; background: none; border: 0; padding: 0; cursor: pointer; position: relative;
+  }
+  .bar-fill {
+    width: 100%; max-width: 26px; border-radius: 6px 6px 3px 3px; background: var(--bar);
+    min-height: 4px; transition: height .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .bar.today .bar-fill, .bar[aria-pressed="true"] .bar-fill { background: var(--blue); }
+  .bar-val {
+    position: absolute; top: -22px; font-size: 12px; font-weight: 700; color: var(--blue);
+    visibility: hidden;
+  }
+  .bar.today .bar-val, .bar[aria-pressed="true"] .bar-val { visibility: visible; }
+  .bar.zero .bar-fill { background: var(--line); }
+  .axis { display: flex; gap: 6px; margin-top: 8px; }
+  .axis span { flex: 1; text-align: center; font-size: 11px; color: var(--faint); }
+  .axis span.today { color: var(--blue); font-weight: 700; }
+  .chart-note { margin: 14px 0 0; color: var(--sub); font-size: 13px; }
+
+  /* 세그먼트 */
+  .seg {
+    display: flex; background: var(--seg); border-radius: 12px; padding: 3px; margin-bottom: 8px;
+  }
+  .seg button {
+    flex: 1; border: 0; background: none; padding: 8px 4px; border-radius: 9px;
+    font-size: 14px; font-weight: 600; color: var(--sub); cursor: pointer; white-space: nowrap;
+  }
+  .seg button[aria-selected="true"] {
+    background: var(--seg-on); color: var(--text);
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  }
+  .seg .n { font-weight: 500; margin-left: 3px; }
+
+  /* 목록 */
+  .day { font-size: 13px; color: var(--sub); font-weight: 600; margin: 20px 0 4px; }
+  .row {
+    display: flex; align-items: center; gap: 14px; padding: 12px 8px; margin: 0 -8px;
+    border-radius: 14px; transition: background .15s, transform .15s;
+  }
+  .row:active { background: var(--press); transform: scale(.985); }
+  @media (hover: hover) { .row:hover { background: var(--press); } }
+  .thumb {
+    width: 48px; height: 48px; border-radius: 14px; flex: none; overflow: hidden;
+    display: grid; place-items: center; font-weight: 700; font-size: 18px;
+  }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .row-main { flex: 1; min-width: 0; }
+  .row-title {
+    font-size: 15px; font-weight: 500; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    word-break: break-all;
+  }
+  .row-sub { font-size: 13px; color: var(--sub); margin-top: 2px; }
+  .row-sub .st { font-weight: 600; }
+  .st.ok { color: var(--blue); }
+  .st.check, .st.manual { color: var(--orange); }
+  .st.fail { color: var(--red); }
+
+  .more {
+    display: block; width: 100%; margin-top: 12px; padding: 14px; border: 0; border-radius: 14px;
+    background: var(--seg); font-weight: 600; color: var(--sub); cursor: pointer;
+  }
+  .empty { text-align: center; color: var(--sub); padding: 36px 0 20px; }
+
+  /* 실행 기록 */
+  .run { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+  .run + .run { border-top: 1px solid var(--line); }
+  .run-when { font-weight: 600; }
+  .run-what { font-size: 13px; color: var(--sub); margin-top: 1px; }
+  .chip {
+    font-size: 13px; font-weight: 600; padding: 5px 10px; border-radius: 8px; white-space: nowrap;
+    background: var(--blue-soft); color: var(--blue);
+  }
+  .chip.bad { background: var(--red-soft); color: var(--red); }
+  .chip.mid { background: var(--orange-soft); color: var(--orange); }
+
+  .foot { color: var(--faint); font-size: 12px; text-align: center; margin-top: 24px; padding: 0 20px; }
+  .foot a { text-decoration: underline; }
+
+  .skeleton { color: var(--faint); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bar-fill, .row { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4l2.9 2.9 6.1-6.6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      체험단 자동 신청
+    </div>
+    <span class="updated" id="updated"></span>
+  </header>
+
+  <div class="alert" id="alert" role="alert"></div>
+
+  <section class="sec hero" aria-live="polite">
+    <h1 id="headline" class="skeleton">기록을 불러오고 있어요</h1>
+    <div class="next" id="next"></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">지금까지</div><div class="stat-value num" id="s-total">-</div></div>
+      <div class="stat"><div class="stat-label">최근 7일</div><div class="stat-value num" id="s-week">-</div></div>
+      <div class="stat" id="s-check-wrap"><div class="stat-label">확인 필요</div><div class="stat-value num" id="s-check">-</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-title">최근 2주 신청</h2>
+    <div class="chart" id="chart" role="group" aria-label="최근 14일 일별 신청 수"></div>
+    <div class="axis" id="axis" aria-hidden="true"></div>
+    <p class="chart-note" id="chart-note"></p>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-title">신청 내역</h2>
+    <div class="seg" role="tablist" id="seg">
+      <button role="tab" data-f="all" aria-selected="true">전체<span class="n num"></span></button>
+      <button role="tab" data-f="ok" aria-selected="false">완료<span class="n num"></span></button>
+      <button role="tab" data-f="check" aria-selected="false">확인 필요<span class="n num"></span></button>
+      <button role="tab" data-f="fail" aria-selected="false">실패<span class="n num"></span></button>
+    </div>
+    <div id="list"></div>
+    <button class="more" id="more" hidden>더 보기</button>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-title">자동 실행 기록</h2>
+    <div id="runs"></div>
+  </section>
+
+  <p class="foot">매일 오전 10시에 GitHub가 자동으로 신청하고 이 페이지를 새로 고쳐요.<br>실행이 몰리면 10~30분 늦게 시작될 수 있어요.</p>
+</div>
+
+<script>
+(() => {
+  const RUN_HOUR_KST = 10;              // 매일 자동 신청 시각 (워크플로 cron 과 맞춤)
+  const PAGE = 30;
+  const DOW = ["일", "월", "화", "수", "목", "금", "토"];
+  const STATUS = {
+    ok: "신청 완료",
+    check: "제출함, 확인 필요",
+    manual: "직접 신청 필요",
+    fail: "실패",
+  };
+  const RUN_STATUS = {
+    success: ["완료", ""],
+    login_expired: ["로그인 만료", "bad"],
+    no_list: ["목록 못 불러옴", "bad"],
+    running: ["중간에 멈춤", "mid"],
+  };
+  const TINTS = [
+    ["#E8F3FF", "#3182F6"], ["#FFF3E0", "#F57800"], ["#E5F8EE", "#03A55D"],
+    ["#F3EDFF", "#7B4FE0"], ["#FFEEF0", "#E8466A"], ["#E9F7F8", "#0F9AA8"],
+  ];
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  // 기록 시각은 KST 문자열("YYYY-MM-DD HH:MM:SS") — 한국 날짜 기준으로 계산
+  const kstNow = () => new Date(Date.now() + 9 * 3600e3);          // UTC 필드에 한국 시각을 담음
+  const kstDateStr = (d) => d.toISOString().slice(0, 10);
+  const todayKST = () => kstDateStr(kstNow());
+  const addDays = (ymd, n) => {
+    const d = new Date(ymd + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return kstDateStr(d);
+  };
+  const isApplied = (r) => r.status === "ok" || r.status === "check";
+
+  function dayLabel(ymd) {
+    const t = todayKST();
+    if (ymd === t) return "오늘";
+    if (ymd === addDays(t, -1)) return "어제";
+    const d = new Date(ymd + "T00:00:00Z");
+    const y = ymd.slice(0, 4) !== t.slice(0, 4) ? `${d.getUTCFullYear()}년 ` : "";
+    return `${y}${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일 ${DOW[d.getUTCDay()]}요일`;
+  }
+  function timeLabel(at) {
+    const [h, m] = at.slice(11, 16).split(":").map(Number);
+    return `${h < 12 ? "오전" : "오후"} ${h % 12 || 12}:${String(m).padStart(2, "0")}`;
+  }
+
+  function nextRun() {
+    const n = kstNow();
+    const t = new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate(), RUN_HOUR_KST));
+    if (n >= t) t.setUTCDate(t.getUTCDate() + 1);
+    const mins = Math.max(1, Math.round((t - n) / 60e3));
+    const when = kstDateStr(t) === todayKST() ? "오늘" : "내일";
+    const left = mins >= 60 ? `${Math.floor(mins / 60)}시간 ${mins % 60}분` : `${mins}분`;
+    return { when, left };
+  }
+
+  function thumb(r) {
+    const name = (r.title || "").replace(/^\s*(\[[^\]]*\]\s*|\([^)]*\)\s*)+/, "").replace(/^[^0-9A-Za-z가-힣]+/, "").trim() || r.title || "?";
+    let h = 0; for (const c of r.url || name) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+    const [bg, fg] = TINTS[h % TINTS.length];
+    const letter = esc([...name][0] || "?");
+    const fallback = `<span style="color:${fg}">${letter}</span>`;
+    const img = r.image
+      ? `<img src="${esc(r.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"
+           onerror="this.parentNode.innerHTML=this.dataset.f" data-f='${fallback.replace(/'/g, "&#39;")}'>`
+      : fallback;
+    return `<span class="thumb" style="background:${bg}">${img}</span>`;
+  }
+
+  function countUp(el, to) {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || to < 2) { el.textContent = to; return; }
+    const start = performance.now(), dur = 700;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / dur);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  let DATA = { runs: [], records: [] }, filter = "all", shown = PAGE;
+
+  function renderHero() {
+    const recs = DATA.records, t = todayKST();
+    const today = recs.filter((r) => isApplied(r) && r.at.startsWith(t)).length;
+    const total = recs.filter(isApplied).length;
+    const weekFrom = addDays(t, -6);
+    const week = recs.filter((r) => isApplied(r) && r.at.slice(0, 10) >= weekFrom).length;
+    const check = recs.filter((r) => r.status === "check" || r.status === "manual").length;
+
+    const h = $("headline");
+    h.classList.remove("skeleton");
+    if (today > 0) {
+      h.innerHTML = `오늘 <span class="count num" id="hc">0</span>개<br>신청했어요`;
+      countUp($("hc"), today);
+    } else {
+      h.innerHTML = total ? "오늘은 아직<br>신청한 체험단이 없어요" : "아직 신청 기록이 없어요";
+    }
+    const nr = nextRun();
+    $("next").innerHTML = `다음 자동 신청은 <strong>${nr.when} 오전 ${RUN_HOUR_KST}시</strong>, ${nr.left} 남았어요`;
+
+    $("s-total").innerHTML = `${total}<small>개</small>`;
+    $("s-week").innerHTML = `${week}<small>개</small>`;
+    $("s-check").innerHTML = `${check}<small>개</small>`;
+    $("s-check-wrap").classList.toggle("warn", check > 0);
+
+    if (DATA.updated_at) $("updated").textContent = `${dayLabel(DATA.updated_at.slice(0, 10))} ${timeLabel(DATA.updated_at)} 기준`;
+  }
+
+  function renderAlert() {
+    const last = DATA.runs[DATA.runs.length - 1];
+    const box = $("alert");
+    if (!last || last.status === "success") { box.style.display = "none"; return; }
+    const msg = {
+      login_expired: ["스타일씨 로그인이 만료됐어요",
+        "내 컴퓨터에서 python stylec_auto.py --export-session 을 실행하고, 만들어진 값을 GitHub Secrets 의 STYLEC_SESSION 에 다시 넣어 주세요."],
+      no_list: ["체험단 목록을 불러오지 못했어요",
+        "사이트 구조가 바뀌었을 수 있어요. Actions 실행 로그를 확인해 주세요."],
+      running: ["지난 실행이 중간에 멈췄어요", "다음 실행 때 남은 체험단부터 이어서 신청해요."],
+    }[last.status];
+    if (!msg) { box.style.display = "none"; return; }
+    box.innerHTML = `${esc(msg[0])}<p>${esc(msg[1])}</p>`;
+    box.style.display = "block";
+  }
+
+  function renderChart() {
+    const t = todayKST(), days = [];
+    for (let i = 13; i >= 0; i--) days.push(addDays(t, -i));
+    const counts = days.map((d) => DATA.records.filter((r) => isApplied(r) && r.at.startsWith(d)).length);
+    const max = Math.max(1, ...counts);
+    $("chart").innerHTML = days.map((d, i) => {
+      const c = counts[i], pct = c ? Math.max(6, (c / max) * 100) : 3;
+      const cls = ["bar", d === t ? "today" : "", c ? "" : "zero"].join(" ");
+      return `<button class="${cls}" aria-pressed="false" aria-label="${dayLabel(d)} ${c}개" data-i="${i}">
+                <span class="bar-val num">${c}</span>
+                <span class="bar-fill" style="height:${pct}%"></span>
+              </button>`;
+    }).join("");
+    $("axis").innerHTML = days.map((d) =>
+      `<span class="${d === t ? "today" : ""}">${d === t ? "오늘" : Number(d.slice(8))}</span>`).join("");
+    const sum = counts.reduce((a, b) => a + b, 0);
+    $("chart-note").textContent = sum ? `2주 동안 ${sum}개, 하루 평균 ${(sum / 14).toFixed(1)}개 신청했어요` : "최근 2주 동안 신청한 체험단이 없어요";
+
+    $("chart").onclick = (e) => {
+      const b = e.target.closest(".bar"); if (!b) return;
+      const on = b.getAttribute("aria-pressed") === "true";
+      $("chart").querySelectorAll(".bar").forEach((x) => x.setAttribute("aria-pressed", "false"));
+      b.setAttribute("aria-pressed", on ? "false" : "true");
+      const i = +b.dataset.i;
+      $("chart-note").textContent = on
+        ? (sum ? `2주 동안 ${sum}개, 하루 평균 ${(sum / 14).toFixed(1)}개 신청했어요` : "최근 2주 동안 신청한 체험단이 없어요")
+        : `${dayLabel(days[i])}에 ${counts[i]}개 신청했어요`;
+    };
+  }
+
+  function matches(r) {
+    if (filter === "all") return true;
+    if (filter === "check") return r.status === "check" || r.status === "manual";
+    return r.status === filter;
+  }
+
+  function renderList() {
+    const all = DATA.records.slice().reverse();
+    const n = { all: all.length, ok: 0, check: 0, fail: 0 };
+    all.forEach((r) => { if (r.status === "ok") n.ok++; else if (r.status === "fail") n.fail++; else n.check++; });
+    $("seg").querySelectorAll("button").forEach((b) => {
+      b.querySelector(".n").textContent = n[b.dataset.f];
+      b.setAttribute("aria-selected", b.dataset.f === filter ? "true" : "false");
+    });
+
+    const rows = all.filter(matches);
+    if (!rows.length) {
+      $("list").innerHTML = `<div class="empty">${filter === "all" ? "첫 자동 신청이 끝나면 여기에 쌓여요" : "해당하는 신청이 없어요"}</div>`;
+      $("more").hidden = true;
+      return;
+    }
+    let html = "", lastDay = "";
+    rows.slice(0, shown).forEach((r) => {
+      const d = r.at.slice(0, 10);
+      if (d !== lastDay) { html += `<div class="day">${dayLabel(d)}</div>`; lastDay = d; }
+      html += `<a class="row" href="${esc(r.url)}" target="_blank" rel="noopener" title="${esc(r.result)}">
+        ${thumb(r)}
+        <span class="row-main">
+          <span class="row-title">${esc(r.title || r.url)}</span>
+          <span class="row-sub"><span class="st ${r.status}">${STATUS[r.status] || esc(r.status)}</span> ${timeLabel(r.at)}</span>
+        </span></a>`;
+    });
+    $("list").innerHTML = html;
+    $("more").hidden = rows.length <= shown;
+  }
+
+  function renderRuns() {
+    const runs = DATA.runs.slice(-7).reverse();
+    if (!runs.length) {
+      $("runs").innerHTML = `<div class="empty">아직 자동 실행 기록이 없어요</div>`;
+      return;
+    }
+    $("runs").innerHTML = runs.map((r) => {
+      const [label, tone] = RUN_STATUS[r.status] || [r.status, "mid"];
+      const parts = [];
+      if (r.status === "success" || r.ok || r.check) {
+        parts.push(`${(r.ok || 0) + (r.check || 0)}개 신청`);
+        if (r.fail) parts.push(`${r.fail}개 실패`);
+        if (r.manual) parts.push(`${r.manual}개 직접 신청 필요`);
+        if (r.listed) parts.push(`목록 ${r.listed}개 확인`);
+      }
+      if (r.note) parts.push(r.note);
+      const d = (r.started_at || "").slice(0, 10);
+      return `<div class="run">
+        <div><div class="run-when">${dayLabel(d)} ${timeLabel(r.started_at)}</div>
+          <div class="run-what">${esc(parts.join(", ") || "-")}</div></div>
+        <span class="chip ${tone}">${esc(label)}</span></div>`;
+    }).join("");
+  }
+
+  $("seg").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    filter = b.dataset.f; shown = PAGE; renderList();
+  });
+  $("more").addEventListener("click", () => { shown += PAGE; renderList(); });
+
+  fetch("data/history.json?ts=" + Date.now(), { cache: "no-store" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((d) => {
+      DATA = { runs: d.runs || [], records: (d.records || []).filter((r) => r.status !== "skip"), updated_at: d.updated_at };
+      renderAlert(); renderHero(); renderChart(); renderList(); renderRuns();
+    })
+    .catch(() => {
+      $("headline").classList.remove("skeleton");
+      $("headline").textContent = "기록을 불러오지 못했어요";
+      $("next").textContent = "docs/data/history.json 파일이 저장소에 있는지 확인해 주세요.";
+    });
+
+  setInterval(() => {
+    const nr = nextRun();
+    const el = $("next");
+    if (el.querySelector("strong")) el.innerHTML = `다음 자동 신청은 <strong>${nr.when} 오전 ${RUN_HOUR_KST}시</strong>, ${nr.left} 남았어요`;
+  }, 60e3);
+})();
+</script>
+</body>
+</html>

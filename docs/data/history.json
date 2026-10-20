@@ -1,0 +1,411 @@
+{
+ "updated_at": "2026-10-20 16:51:21",
+ "runs": [
+  {
+   "started_at": "2026-10-20 16:38:27",
+   "finished_at": "2026-10-20 16:51:21",
+   "status": "success",
+   "listed": 50,
+   "ok": 40,
+   "check": 7,
+   "manual": 0,
+   "fail": 2,
+   "skip": 1,
+   "note": "내 컴퓨터에서 실행"
+  }
+ ],
+ "records": [
+  {
+   "at": "2026-10-20 16:38:27",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[랜덤당첨] 신라면 120g x 40개",
+   "url": "https://www.stylec.co.kr/trials/153803",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:38:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[빌라르] 목 어깨 베개 마사지기 𝐕𝟐",
+   "url": "https://www.stylec.co.kr/trials/153901",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:38:51",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 세탁세제 시그니처향 1L 1개",
+   "url": "https://www.stylec.co.kr/trials/152608",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:40:00",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 섬유유연제 미드나잇 로지향 1L 1개",
+   "url": "https://www.stylec.co.kr/trials/152603",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:40:13",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[랜덤당첨] 신라면 120g x 40개",
+   "url": "https://www.stylec.co.kr/trials/153808",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:40:23",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[빌라르] 무선 자동 롤러 마사지기",
+   "url": "https://www.stylec.co.kr/trials/153946",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:40:35",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 섬유유연제 시그니처향 1L 1개",
+   "url": "https://www.stylec.co.kr/trials/152597",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:40:48",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 보로탈코 벨벳티 크림 (리미티드에디션)",
+   "url": "https://www.stylec.co.kr/trials/153918",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:41:00",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 섬유유연제 프레리나향 1L 1개",
+   "url": "https://www.stylec.co.kr/trials/152600",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:41:20",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[자사몰] 프리미엄 세정티슈_블로그 1차",
+   "url": "https://www.stylec.co.kr/trials/154012",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:41:31",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[카카오톡선물하기] 디어도어 비건 저자극 바디스크럽 2종 블로그 체험단",
+   "url": "https://www.stylec.co.kr/trials/153727",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:41:53",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "센토 인텐스 프리미엄 대용량 디퓨저 선물세트 우드세이 550ml*2개",
+   "url": "https://www.stylec.co.kr/trials/152964",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:42:12",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "올레그레인(Olle Grain) 올리브오일+레몬+파라다이스그레인 4 IN 1  프리미엄 멀티팩",
+   "url": "https://www.stylec.co.kr/trials/153267",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:42:23",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "바른식방 통밀깜빠뉴 & 통밀 모닝빵",
+   "url": "https://www.stylec.co.kr/trials/152836",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:42:43",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "드시모네 키즈요거트 플레인",
+   "url": "https://www.stylec.co.kr/trials/151035",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:42:56",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "정직한실험실 보타닉 히노끼 헤어마스크 300ml",
+   "url": "https://www.stylec.co.kr/trials/152937",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:43:18",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "정직한실험실 보타닉 샴푸 컬렉션(3ea)",
+   "url": "https://www.stylec.co.kr/trials/152991",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:43:30",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 리놀라  로션 & 리놀라 라이트",
+   "url": "https://www.stylec.co.kr/trials/153916",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:43:41",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "정직한실험실 보타닉 제비꽃 샴푸",
+   "url": "https://www.stylec.co.kr/trials/152966",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:43:52",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 건조기 시트 코코블리향 1개",
+   "url": "https://www.stylec.co.kr/trials/153225",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:44:04",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 세탁조 클리너 1개",
+   "url": "https://www.stylec.co.kr/trials/153251",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:44:18",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴리퀸]프리미엄 건조기 시트 시그니처향 1개",
+   "url": "https://www.stylec.co.kr/trials/153224",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:44:32",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[티크 코스메틱]카페인 펌픽스 크림&아이크림",
+   "url": "https://www.stylec.co.kr/trials/154007",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:44:46",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리포데이]  PDRN 리페어 바이탈 세럼 30ml",
+   "url": "https://www.stylec.co.kr/trials/153817",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:44:58",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[비타민마을] 맛있는 메가씨 NMN 비타민C 1000",
+   "url": "https://www.stylec.co.kr/trials/153297",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:45:11",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[어텐티]텐더케어크림",
+   "url": "https://www.stylec.co.kr/trials/154046",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:45:20",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[로임스킨] 그린티 오일 클렌저 (블랙헤드 클렌징오일)",
+   "url": "https://www.stylec.co.kr/trials/152446",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:45:42",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "피치홀릭 워터글로우 립틴트 3종",
+   "url": "https://www.stylec.co.kr/trials/152002",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:45:53",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 여배우크림, 멜라토닌 크림 50g&25g (1)",
+   "url": "https://www.stylec.co.kr/trials/152795",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:46:03",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[메디트리] 순 유기농 레몬생강즙 진저샷",
+   "url": "https://www.stylec.co.kr/trials/152973",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:46:15",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "마비스 치약 ONLY 공식몰  '웰컴기프트 셋트' (홀로그램 패키지) 네이버 블로그 인플루언서 모집",
+   "url": "https://www.stylec.co.kr/trials/154759",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:46:28",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[네이버 블로그 | 4차] (신청사유 확인필수) 세울 필요 없이 스스로 서는 물때 방지 욕실화",
+   "url": "https://www.stylec.co.kr/trials/153684",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:46:42",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 여배우크림, 멜라토닌 크림 50g&25g (2)",
+   "url": "https://www.stylec.co.kr/trials/152796",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:46:54",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[로임스킨] 피부진정 콤부차 토너(얼굴홍조 없애는 법)",
+   "url": "https://www.stylec.co.kr/trials/152452",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:47:07",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 여배우크림, 멜라토닌 크림 50g&25g (3)",
+   "url": "https://www.stylec.co.kr/trials/152797",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:47:17",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 여배우크림, 멜라토닌 크림 50g&25g (4)",
+   "url": "https://www.stylec.co.kr/trials/152799",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:47:27",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[비타민마을] 베이비 유아 아이 초임계 비타민K2 + D3 드롭",
+   "url": "https://www.stylec.co.kr/trials/153363",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:47:47",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "올레그레인(Olle Grain) 올리브오일+레몬+파라다이스그레인 4 IN 1  프리미엄 멀티팩",
+   "url": "https://www.stylec.co.kr/trials/153261",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:48:00",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[로임스킨] 카렌듈라 오일 클렌저(화이트헤드)",
+   "url": "https://www.stylec.co.kr/trials/152454",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:48:22",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[로임스킨] 카렌듈라 아쿠아 레티놀 크림(팔자주름)",
+   "url": "https://www.stylec.co.kr/trials/152450",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:48:34",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[로임스킨] 카렌듈라 포밍 클렌저(얼굴홍조없애는법)",
+   "url": "https://www.stylec.co.kr/trials/152448",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:48:46",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[카카오톡선물하기] 디어도어 비건 저자극 바디스크럽 2종 인스타 체험단",
+   "url": "https://www.stylec.co.kr/trials/153732",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:48:59",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "캠핑 조리기구의 혁신! 장작캠프 캠핑테이블",
+   "url": "https://www.stylec.co.kr/trials/154232",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:49:40",
+   "status": "fail",
+   "result": "fail:TimeoutError: Locator.click: Timeout 30000ms exceeded.",
+   "title": "[인스타/릴스] 네이처빌 바지락 쌀칼국수 * 8개입",
+   "url": "https://www.stylec.co.kr/trials/153529",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:50:00",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 라니펫 슬리커 브러쉬 딥케어, 1개",
+   "url": "https://www.stylec.co.kr/trials/152520",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:50:13",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[윙잇] 엄마가 두고 간 순두부찌개",
+   "url": "https://www.stylec.co.kr/trials/154349",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:50:26",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "지친 하루, 액상으로 간단히 챙기자!",
+   "url": "https://www.stylec.co.kr/trials/151475",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:50:39",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[인스타 릴스]모다모다 돌콩 엑소좀 탈모 샴푸 1000ml",
+   "url": "https://www.stylec.co.kr/trials/152393",
+   "image": ""
+  },
+  {
+   "at": "2026-10-20 16:51:21",
+   "status": "fail",
+   "result": "fail:TimeoutError: Locator.click: Timeout 30000ms exceeded.",
+   "title": "빛으로 완성하는 공간의 무드, 번개표 웰컴라이트 ☆",
+   "url": "https://www.stylec.co.kr/trials/148938",
+   "image": ""
+  }
+ ]
+}

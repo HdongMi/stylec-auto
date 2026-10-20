@@ -1,0 +1,103 @@
+name: 체험단 자동 신청
+
+on:
+  schedule:
+    # 매일 한국시간 오전 10:00 (= UTC 01:00). GitHub 사정으로 10~30분 늦게 시작될 수 있음
+    - cron: "0 1 * * *"
+  workflow_dispatch: # Actions 탭의 'Run workflow' 버튼으로 바로 실행
+
+permissions:
+  contents: write # 신청 기록(docs/data/history.json) 커밋
+  pages: write # 대시보드 배포
+  id-token: write
+
+concurrency:
+  group: stylec-apply
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      # 신청서 빈칸에 들어갈 문구 — 원하는 대로 수정하세요
+      APPLY_MESSAGE: "제품에 관심이 많아 꼼꼼하고 정성스럽게 리뷰 작성하겠습니다."
+      # 제외할 키워드(쉼표 구분). 예: "인스타,릴스,유튜브"
+      EXCLUDE: ""
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 패키지 설치
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: 로그인 상태 복원
+        env:
+          STYLEC_SESSION: ${{ secrets.STYLEC_SESSION }}
+        run: |
+          if [ -z "$STYLEC_SESSION" ]; then
+            echo "::error::STYLEC_SESSION 시크릿이 없습니다. README 2·4단계를 확인하세요."
+            exit 1
+          fi
+          echo "$STYLEC_SESSION" | base64 -d > session.json
+
+      - name: 체험단 신청
+        run: >
+          python stylec_auto.py
+          --apply --max 999 --headless
+          --storage-state session.json
+          --history docs/data/history.json
+          --message "$APPLY_MESSAGE"
+          --exclude "$EXCLUDE"
+
+      - name: 로그인 상태 파일 삭제
+        if: always()
+        run: rm -f session.json
+
+      - name: 신청 기록 저장
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/history.json
+          if git diff --cached --quiet; then
+            echo "바뀐 기록 없음"
+            exit 0
+          fi
+          git commit -m "신청 기록 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: 직접 확인이 필요한 화면 저장
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  deploy:
+    # 신청이 실패해도(로그인 만료 등) 대시보드에 상태를 보여주도록 항상 배포
+    needs: apply
+    if: always()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }} # 방금 커밋한 최신 기록 포함
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
