@@ -66,7 +66,7 @@ VERSION = "v6"
 
 BASE = Path(__file__).resolve().parent
 STATE_FILE = BASE / "musinsa_login.json"
-LOG_DIR = BASE / "logs" / datetime.now().strftime("%Y-%m-%d_%H%M")
+LOG_DIR = BASE / "logs" / datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d_%H%M")
 
 LIST_API = "https://www.musinsa.com/preuser/api/v1/event/events"
 LOGIN_API = "https://my.musinsa.com/api/member/v1/login-status"
@@ -111,6 +111,19 @@ def save_history(path, h):
     h["updated_at"] = now_kst()
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(json.dumps(h, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def write_live(path, live):
+    """실행 중 진행 상황 파일 (대시보드가 실시간으로 읽음). 실패해도 신청에는 영향 없음."""
+    if not path:
+        return
+    try:
+        live["updated_at"] = now_kst()
+        tmp = Path(str(path) + ".tmp")
+        tmp.write_text(json.dumps(live, ensure_ascii=False), encoding="utf-8")
+        tmp.replace(path)
+    except Exception as e:
+        print(f"진행 파일 기록 실패: {e}")
 
 
 def status_of(result):
@@ -226,7 +239,7 @@ def export_session():
 
 
 def log(msg: str):
-    line = f"[{datetime.now().strftime('%H:%M:%S')}] {msg}"
+    line = f"[{datetime.now(KST).strftime('%H:%M:%S')}] {msg}"
     print(line, flush=True)
     with open(LOG_DIR / "log.txt", "a", encoding="utf-8") as f:
         f.write(line + "\n")
@@ -571,6 +584,7 @@ def main():
     ap.add_argument("--export-session", action="store_true", help="GitHub Secrets 용 로그인 상태 내보내기")
     ap.add_argument("--storage-state", default="", help="로그인 상태 파일 경로 (기본: musinsa_login.json)")
     ap.add_argument("--history", default="", help="대시보드 기록 파일 경로 (예: docs/data/musinsa.json)")
+    ap.add_argument("--live", default="", help="실행 중 진행 상황 파일 경로 (대시보드 실시간 표시용)")
     ap.add_argument("--dry-run", action="store_true", help="최종 신청 버튼은 누르지 않음")
     ap.add_argument("--limit", type=int, default=0, help="앞에서부터 N개만 처리 (테스트용)")
     ap.add_argument("--headless", action="store_true", help="브라우저 창 숨기기")
@@ -587,12 +601,21 @@ def main():
     run = {"started_at": now_kst(), "finished_at": "", "status": "running",
            "listed": 0, "ok": 0, "check": 0, "manual": 0, "fail": 0, "skip": 0}
 
+    live = {"site": "musinsa", "status": "running", "started_at": run["started_at"],
+            "total": 0, "done": 0, "current": "목록을 불러오는 중", "run": run, "records": []}
+    live_path = "" if args.dry_run else args.live
+
     def close_run(status):
         run["status"] = status
         run["finished_at"] = now_kst()
+        live.update(status=status, current="")
+        write_live(live_path, live)
         if record:
             hist["runs"].append(run)
             save_history(args.history, hist)
+
+    if not args.login:
+        write_live(live_path, live)
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=args.headless and not args.login)
@@ -637,9 +660,14 @@ def main():
         run["listed"] = before
         log(f"신청 대상 체험단 {len(events)}개 (모집 중 {before}개, 이미 신청 {before - len(events)}개 제외)")
 
+        live["total"] = len(events)
+        write_live(live_path, live)
+
         summary, exit_code = {}, 0
         for i, ev in enumerate(events, 1):
             log(f"[{i}/{len(events)}] {ev['name']}  (id={ev['id']})")
+            live["current"] = ev.get("name", "")
+            write_live(live_path, live)
             try:
                 result = apply_one(page, ev, args.dry_run)
             except Exception as e:
@@ -659,6 +687,9 @@ def main():
                     "note": ev.get("_options", ""),
                 })
                 save_history(args.history, hist)  # 중간에 끊겨도 기록이 남도록 매번 저장
+                live["records"].append(hist["records"][-1])
+            live["done"] += 1
+            write_live(live_path, live)
             if key == "LOGIN":
                 exit_code = 2
                 break

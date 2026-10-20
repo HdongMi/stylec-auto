@@ -106,6 +106,19 @@ def save_history(path, h):
     Path(path).write_text(json.dumps(h, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def write_live(path, live):
+    """실행 중 진행 상황 파일 (대시보드가 실시간으로 읽음). 실패해도 신청에는 영향 없음."""
+    if not path:
+        return
+    try:
+        live["updated_at"] = now_kst()
+        tmp = Path(str(path) + ".tmp")
+        tmp.write_text(json.dumps(live, ensure_ascii=False), encoding="utf-8")
+        tmp.replace(path)
+    except Exception as e:
+        print(f"  ※ 진행 파일 기록 실패: {e}")
+
+
 def status_of(result):
     kind = result.split(":")[0]
     return {"ok": "ok", "ok?": "check", "manual": "manual", "fail": "fail"}.get(kind, "skip")
@@ -526,6 +539,7 @@ def main():
                     help="저장된 로그인 상태를 GitHub Secrets 용 텍스트(session_b64.txt)로 내보내기")
     ap.add_argument("--storage-state", default="", help="로그인 상태 파일(session.json)로 실행 (GitHub Actions 용)")
     ap.add_argument("--history", default="", help="대시보드 기록 파일 경로 (예: docs/data/history.json)")
+    ap.add_argument("--live", default="", help="실행 중 진행 상황 파일 경로 (대시보드 실시간 표시용)")
     ap.add_argument("--apply", action="store_true", help="실제로 신청 (없으면 미리보기)")
     ap.add_argument("--max", type=int, default=20, help="이번 실행에서 최대 신청 개수")
     ap.add_argument("--delay", type=float, default=6.0, help="체험단 사이 대기 시간(초)")
@@ -543,6 +557,10 @@ def main():
     hist = load_history(args.history)
     run = {"started_at": now_kst(), "finished_at": "", "status": "running",
            "listed": 0, "ok": 0, "check": 0, "manual": 0, "fail": 0, "skip": 0}
+    live = {"site": "stylec", "status": "running", "started_at": run["started_at"],
+            "total": 0, "done": 0, "current": "목록을 불러오는 중", "run": run, "records": []}
+    live_path = args.live if args.apply else ""
+    write_live(live_path, live)
 
     with sync_playwright() as p:
         browser = None
@@ -598,6 +616,8 @@ def main():
         def close_run(status):
             run["status"] = status
             run["finished_at"] = now_kst()
+            live.update(status=status, current="")
+            write_live(live_path, live)
             if args.apply and args.history:
                 hist["runs"].append(run)
                 save_history(args.history, hist)
@@ -624,12 +644,17 @@ def main():
         mode = "실제 신청" if args.apply else "미리보기"
         print(f"\n총 {len(campaigns)}개 · 이미 신청 {len(already)}개 · 모드: {mode} · 최대 {args.max}개\n")
 
+        live["total"] = len([c for c in campaigns if c["url"] not in already])
+        write_live(live_path, live)
+
         done = 0
         for i, camp in enumerate(campaigns, 1):
             if done >= args.max:
                 break
             if camp["url"] in already:
                 continue
+            live["current"] = camp["title"]
+            write_live(live_path, live)
             try:
                 result = apply_one(page, camp, args)
             except Exception as e:
@@ -651,6 +676,9 @@ def main():
                                             "image": camp.get("image", ""),
                                             "img_checked": camp.get("img_checked", False)})
                     save_history(args.history, hist)  # 중간에 끊겨도 기록이 남도록 매번 저장
+                    live["records"].append(hist["records"][-1])
+            live["done"] += 1
+            write_live(live_path, live)
             if result.startswith(("ok", "dry-run")):
                 done += 1
             human_pause(args.delay, args.delay * 0.3)

@@ -56,13 +56,23 @@ jobs:
           rm -f session.bin
 
       - name: 체험단 신청
-        run: >
-          python stylec_auto.py
-          --apply --max 999 --headless
-          --storage-state session.json
-          --history docs/data/history.json
-          --message "$APPLY_MESSAGE"
-          --exclude "$EXCLUDE"
+        run: |
+          set +e
+          LIVE="$RUNNER_TEMP/live.json"
+          # 진행 상황을 15초마다 live-stylec 브랜치에 올려 대시보드에 실시간 표시
+          bash .github/scripts/live-push.sh "$LIVE" stylec loop &
+          LIVE_PID=$!
+          python stylec_auto.py \
+            --apply --max 999 --headless \
+            --storage-state session.json \
+            --history docs/data/history.json \
+            --live "$LIVE" \
+            --message "$APPLY_MESSAGE" \
+            --exclude "$EXCLUDE"
+          CODE=$?
+          kill "$LIVE_PID" 2>/dev/null
+          bash .github/scripts/live-push.sh "$LIVE" stylec once
+          exit $CODE
 
       - name: 로그인 상태 파일 삭제
         if: always()
@@ -118,11 +128,21 @@ jobs:
 
       - name: 체험단 신청
         if: steps.session.outputs.ok == 'true'
-        run: >
-          python musinsa_preuser.py
-          --headless
-          --storage-state session.json
-          --history docs/data/musinsa.json
+        run: |
+          set +e
+          LIVE="$RUNNER_TEMP/live.json"
+          # 진행 상황을 15초마다 live-musinsa 브랜치에 올려 대시보드에 실시간 표시
+          bash .github/scripts/live-push.sh "$LIVE" musinsa loop &
+          LIVE_PID=$!
+          python musinsa_preuser.py \
+            --headless \
+            --storage-state session.json \
+            --history docs/data/musinsa.json \
+            --live "$LIVE"
+          CODE=$?
+          kill "$LIVE_PID" 2>/dev/null
+          bash .github/scripts/live-push.sh "$LIVE" musinsa once
+          exit $CODE
 
       - name: 로그인 상태 파일 삭제
         if: always()
