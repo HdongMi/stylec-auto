@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Actions 탭의 'Run workflow' 버튼으로 바로 실행
 
 permissions:
-  contents: write # 신청 기록(docs/data/history.json) 커밋
+  contents: write # 신청 기록(docs/data/*.json) 커밋
   pages: write # 대시보드 배포
   id-token: write
 
@@ -15,12 +15,16 @@ concurrency:
   group: stylec-apply
   cancel-in-progress: false
 
+env:
+  PYTHONUNBUFFERED: "1" # 진행 상황이 로그에 실시간으로 보이도록
+
 jobs:
-  apply:
+  # ------------------------------------------------------------ 스타일씨
+  stylec:
+    name: 스타일씨
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      PYTHONUNBUFFERED: "1" # 진행 상황이 로그에 실시간으로 보이도록
       # 신청서 빈칸에 들어갈 문구 — 원하는 대로 수정하세요
       APPLY_MESSAGE: "제품에 관심이 많아 꼼꼼하고 정성스럽게 리뷰 작성하겠습니다."
       # 제외할 키워드(쉼표 구분). 예: "인스타,릴스,유튜브"
@@ -40,13 +44,13 @@ jobs:
 
       - name: 로그인 상태 복원
         env:
-          STYLEC_SESSION: ${{ secrets.STYLEC_SESSION }}
+          SESSION: ${{ secrets.STYLEC_SESSION }}
         run: |
-          if [ -z "$STYLEC_SESSION" ]; then
-            echo "::error::STYLEC_SESSION 시크릿이 없습니다. README 2·4단계를 확인하세요."
+          if [ -z "$SESSION" ]; then
+            echo "::error::STYLEC_SESSION 시크릿이 없습니다. README 를 확인하세요."
             exit 1
           fi
-          echo "$STYLEC_SESSION" | base64 -d > session.bin
+          echo "$SESSION" | base64 -d > session.bin
           # 압축된 값(새 방식)과 압축 안 된 값(예전 방식) 모두 지원
           if gzip -t session.bin 2>/dev/null; then gunzip -c session.bin > session.json; else mv session.bin session.json; fi
           rm -f session.bin
@@ -66,30 +70,82 @@ jobs:
 
       - name: 신청 기록 저장
         if: always()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/history.json
-          if git diff --cached --quiet; then
-            echo "바뀐 기록 없음"
-            exit 0
-          fi
-          git commit -m "신청 기록 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+        run: bash .github/scripts/commit-history.sh docs/data/history.json "스타일씨"
 
       - name: 직접 확인이 필요한 화면 저장
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
+          name: stylec-screenshots
           path: screenshots/
           if-no-files-found: ignore
           retention-days: 7
 
+  # ------------------------------------------------------------ 무신사
+  musinsa:
+    name: 무신사
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 로그인 상태 복원
+        id: session
+        env:
+          SESSION: ${{ secrets.MUSINSA_SESSION }}
+        run: |
+          if [ -z "$SESSION" ]; then
+            echo "::notice::MUSINSA_SESSION 시크릿이 없어 무신사는 건너뜁니다. README 의 무신사 설정을 확인하세요."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "$SESSION" | base64 -d > session.bin
+          if gzip -t session.bin 2>/dev/null; then gunzip -c session.bin > session.json; else mv session.bin session.json; fi
+          rm -f session.bin
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        if: steps.session.outputs.ok == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: 패키지 설치
+        if: steps.session.outputs.ok == 'true'
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: 체험단 신청
+        if: steps.session.outputs.ok == 'true'
+        run: >
+          python musinsa_preuser.py
+          --headless
+          --storage-state session.json
+          --history docs/data/musinsa.json
+
+      - name: 로그인 상태 파일 삭제
+        if: always()
+        run: rm -f session.json
+
+      - name: 신청 기록 저장
+        if: always() && steps.session.outputs.ok == 'true'
+        run: bash .github/scripts/commit-history.sh docs/data/musinsa.json "무신사"
+
+      - name: 로그·스크린샷 저장
+        if: always() && steps.session.outputs.ok == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: musinsa-logs
+          path: logs/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  # ------------------------------------------------------------ 대시보드
   deploy:
-    # 신청이 실패해도(로그인 만료 등) 대시보드에 상태를 보여주도록 항상 배포
-    needs: apply
+    name: 대시보드 배포
+    # 한쪽이 실패해도(로그인 만료 등) 대시보드에 상태를 보여주도록 항상 배포
+    needs: [stylec, musinsa]
     if: always()
     runs-on: ubuntu-latest
     environment:
