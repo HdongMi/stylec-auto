@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20 18:27:43",
+ "updated_at": "2026-10-21 15:39:59",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -23,6 +23,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 93
+  },
+  {
+   "started_at": "2026-10-21 14:36:00",
+   "finished_at": "2026-10-21 15:39:59",
+   "status": "success",
+   "listed": 193,
+   "ok": 0,
+   "check": 133,
+   "manual": 0,
+   "fail": 0,
+   "skip": 4
   }
  ],
  "records": [
@@ -681,6 +692,1203 @@
    "title": "손발온정 국산 생강 흑마늘 참당귀 치커리 HACCP인증 다온결정",
    "url": "https://www.stylec.co.kr/trials/154441",
    "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791276186782.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:37:23",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[블로그] BAS 미니플러스 160 3개입세트(플로랄 부케향)",
+   "url": "https://www.stylec.co.kr/trials/154320",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792378245015.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:37:52",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[라비킷] 고체탈취제 - 데오킷 블로그 협찬",
+   "url": "https://www.stylec.co.kr/trials/155051",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792479808218.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:38:22",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[퓨리영] 크리스탈클리어 부스터 피부과&에스테틱화장품",
+   "url": "https://www.stylec.co.kr/trials/154641",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1771987837236.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:38:42",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메디테라피] 레티날 스킨부스터 세럼",
+   "url": "https://www.stylec.co.kr/trials/154342",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792380929482.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:39:10",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[봉봉프렌즈] 어린이 매니큐어세트 오로라세트",
+   "url": "https://www.stylec.co.kr/trials/154552",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792396159779.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:39:37",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[10월] 더 강력해진 비트 사상 최대 효소 파워! 비트 몬스터 파워젤 기획 세트",
+   "url": "https://www.stylec.co.kr/trials/155095",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792485309921.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:40:05",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[티에임]  리프팅밴드",
+   "url": "https://www.stylec.co.kr/trials/154280",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1780295531608.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:40:33",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[봉봉프렌즈] 천연유래성분 어린이 화장품세트_봉봉 메이크업박스세트",
+   "url": "https://www.stylec.co.kr/trials/154572",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792398071229.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:40:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[블로그] 한우품은 소스 함박스테이크 3종",
+   "url": "https://www.stylec.co.kr/trials/154968",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792477452101.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:41:26",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "사뮤르 이너뷰티 홍삼스틱",
+   "url": "https://www.stylec.co.kr/trials/154406",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785817644402.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:41:56",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[라비킷] 퍼퓸탈취제 - 데오킷 블로그 협찬",
+   "url": "https://www.stylec.co.kr/trials/155047",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792478412440.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:42:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "레디 보이 플럼핑 하드 버터 영양 립밤",
+   "url": "https://www.stylec.co.kr/trials/154400",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785830590753.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:42:52",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 블로그 | 3차] (신청 사유 확인 필수) 프리미엄 코마사 40수 호텔수건 3장",
+   "url": "https://www.stylec.co.kr/trials/154822",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792458605100.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:43:22",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "마비스 치약 ONLY 공식몰  '웰컴기프트 셋트' (홀로그램 패키지) 인스타그램  인플루언서 모집",
+   "url": "https://www.stylec.co.kr/trials/154751",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792417092696.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:43:49",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메디테라피] 포쎄라 리얼 비피다 핑크 블러 크림",
+   "url": "https://www.stylec.co.kr/trials/154374",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792381078809.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:44:19",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "마비스 치약 ONLY 공식몰  '웰컴기프트 셋트' (홀로그램 패키지) 네이버 클립 인플루언서 모집",
+   "url": "https://www.stylec.co.kr/trials/154746",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792417092696.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:44:39",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "셀루미 1.5M 듀얼시스템 올인원 스마트폰 삼각대 SEL-GT1550M 2세대",
+   "url": "https://www.stylec.co.kr/trials/154943",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792474774198.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:45:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] 샬랑드파리 쿠션 드 루미나레 21호, 1개",
+   "url": "https://www.stylec.co.kr/trials/153810",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791267427224.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:45:36",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메라블] 루비알엔 피코샷 크림",
+   "url": "https://www.stylec.co.kr/trials/154292",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784858600682.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:46:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메라블] 루비알엔 앰플 클렌저",
+   "url": "https://www.stylec.co.kr/trials/154295",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784859567770.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:46:36",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "KINY 키니 리브인뮤즈 손상모 케어 샴푸 500ml",
+   "url": "https://www.stylec.co.kr/trials/154866",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791786091047.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:47:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[블로그체험단] 시올리 판테놀 7% 앰플 대용량 55ml",
+   "url": "https://www.stylec.co.kr/trials/155147",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1761717444574.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:47:29",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "OHOB 로즈 퍼퓸 아로마틱 바디워시 1,000ml",
+   "url": "https://www.stylec.co.kr/trials/153853",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791355856980.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:47:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[라비킷] 고체탈취제 - 데오킷",
+   "url": "https://www.stylec.co.kr/trials/155054",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792482242739.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:48:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[블로그체험단] 시올리 뿌리는 에센스 토너 | 퍼스트 레이어 워터",
+   "url": "https://www.stylec.co.kr/trials/155110",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1769624354351.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:48:53",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "치과에서 만든 미백 톤업파우더 '스노우플러스'",
+   "url": "https://www.stylec.co.kr/trials/154514",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791798139845.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:49:22",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[리포데이]  PDRN 리페어 바이탈 세럼 30ml",
+   "url": "https://www.stylec.co.kr/trials/153819",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792121043172.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:49:50",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[향수 덕후 모집!] 라플론 향수 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/151790",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791768112286.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:50:21",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] 지속력 좋은 안 지워지는! 샬랑드파리 쥬얼 샤인 립스틱 * 3컬러 각 1개씩 (총 3개-체리아, 누데아, 피그아)",
+   "url": "https://www.stylec.co.kr/trials/153811",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788419672483.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:50:49",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메라블] 유쎄라블 리프팅샷 900 아이크림",
+   "url": "https://www.stylec.co.kr/trials/154289",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1781603215177.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:51:19",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "올페이스 아이스바이옴 쿨링 세럼 갱년기 운동후 안면 열감 홍조 수딩 세럼",
+   "url": "https://www.stylec.co.kr/trials/154239",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792336236788.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:51:47",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "KINY 키니 더루틴 두피 케어 쿨링 샴푸 500ml",
+   "url": "https://www.stylec.co.kr/trials/154931",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792471643614.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:52:15",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "생기 넘치는 토끼 혀를 위한 틴트 필름♡",
+   "url": "https://www.stylec.co.kr/trials/154667",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791337322280.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:52:43",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "포뉴 비타민D 1000IU",
+   "url": "https://www.stylec.co.kr/trials/154315",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1777012914853.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:53:11",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메라블] 포어시그널 타이트락셀 앰플",
+   "url": "https://www.stylec.co.kr/trials/154286",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1781606759221.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:53:42",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[윙잇] 엄마가 두고 간 순두부찌개",
+   "url": "https://www.stylec.co.kr/trials/154303",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792375315854.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:54:14",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 클립 | 3차] (신청 사유 확인 필수) 프리미엄 코마사 40수 호텔수건 3장",
+   "url": "https://www.stylec.co.kr/trials/154821",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792458488806.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:54:43",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 클립] 한우품은 소스 함박스테이크 3종",
+   "url": "https://www.stylec.co.kr/trials/154984",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792477597799.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:55:14",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] 샬랑드파리 쿠션 드 루나 클래식 21호, 1개",
+   "url": "https://www.stylec.co.kr/trials/153809",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788418880002.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:55:38",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[덴티글 클리어샷 제품 증정 체험단 모집]",
+   "url": "https://www.stylec.co.kr/trials/153569",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1789620285974.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:56:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[루솔브] 비오티아 리볼좀 탈모 완화 토닉",
+   "url": "https://www.stylec.co.kr/trials/154284",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784776735979.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:56:38",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[카페꼬메르] 더치커피 20팩+5팩  (원두 7종 원하는 종류 배송)",
+   "url": "https://www.stylec.co.kr/trials/154934",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792469695209.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:57:07",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[티크 코스메틱]카페인 펌픽스 크림&아이크림",
+   "url": "https://www.stylec.co.kr/trials/154008",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792153728761.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:57:37",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[세렌디뷰티]씨솔트 스파 마스크",
+   "url": "https://www.stylec.co.kr/trials/154009",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792154800145.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:58:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] 여배우크림, 멜라토닌 크림 50g&25g",
+   "url": "https://www.stylec.co.kr/trials/152803",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791944558220.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:58:34",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "레디 보이 슈퍼 리치 핸드 앤 네일 밤",
+   "url": "https://www.stylec.co.kr/trials/154402",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1767748455076.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:59:03",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "두피 트러블 진정스위치 /두피 고민 잡아주는 홈케어 두피앰플",
+   "url": "https://www.stylec.co.kr/trials/153799",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792120864617.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:59:33",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] 지속력 좋은 안 지워지는! 샬랑드파리 쥬얼 샤인 립스틱 (피오니아) * 1개",
+   "url": "https://www.stylec.co.kr/trials/153812",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788419672483.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 14:59:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "모발 밀도 트리트먼트  250ml",
+   "url": "https://www.stylec.co.kr/trials/154336",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782369081920.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:00:25",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[나인위시스] 하이드라 수분 앰플 나노 플러스 50ml - 블로그 체험단",
+   "url": "https://www.stylec.co.kr/trials/155012",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785462936746.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:00:56",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[페리덤] 구강 유산균 껌 페리덤 덴토락!",
+   "url": "https://www.stylec.co.kr/trials/154314",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792376873006.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:01:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "모발 밀도 트리트먼트  250ml",
+   "url": "https://www.stylec.co.kr/trials/154338",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782369081920.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:01:53",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "마비스 치약 ONLY 공식몰  '웰컴기프트 셋트' (홀로그램 패키지) 인스타그램 릴스 인플루언서 모집",
+   "url": "https://www.stylec.co.kr/trials/154742",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792417092696.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:02:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[비렌느] 모공각화증 관리에 바디 스팟엑스 크림",
+   "url": "https://www.stylec.co.kr/trials/154869",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792463214170.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:02:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "모발 밀도 트리트먼트  250ml",
+   "url": "https://www.stylec.co.kr/trials/154334",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782369081920.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:03:23",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[인스타그램 릴스] 한우품은 소스 함박스테이크 3종",
+   "url": "https://www.stylec.co.kr/trials/154986",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792479430924.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:03:53",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "KINY 키니 더루틴 두피 케어 쿨링 샴푸 500ml",
+   "url": "https://www.stylec.co.kr/trials/154665",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792052268837.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:04:23",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "하루반",
+   "url": "https://www.stylec.co.kr/trials/155044",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792474264526.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:04:52",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[닥터데이알] 잇몸 건강 케어",
+   "url": "https://www.stylec.co.kr/trials/154557",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792396519831.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:05:22",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[풀리] 쌀 반죽 팩클렌저",
+   "url": "https://www.stylec.co.kr/trials/152896",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791958754972.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:06:10",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "닥터모건 관절플러스 뮤코다당단백 콘드로이친 1500",
+   "url": "https://www.stylec.co.kr/trials/153293",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788247189356.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:06:39",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[정가 39,600원] 본아페티 강아지 피부+알러지 기능성 소프트사료 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/153131",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792023765912.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:07:01",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 클립 | 4차] (신청사유 확인필수) 세울 필요 없이 스스로 서는 물때 방지 욕실화",
+   "url": "https://www.stylec.co.kr/trials/153678",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792112089819.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:07:31",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메디테라피] 레티날 스킨부스터 멀티밤",
+   "url": "https://www.stylec.co.kr/trials/154888",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792383715618.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:08:00",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[릴스] BAS 겔 탈취제 에메랄드 397g * 1개",
+   "url": "https://www.stylec.co.kr/trials/154321",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792378606603.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:08:29",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[자미드네] 스팀 아이마스크 1세트(30개입)",
+   "url": "https://www.stylec.co.kr/trials/154366",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1771578970596.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:09:00",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[퓨리영] 크리스탈클리어 부스터 피부과&에스테틱화장품",
+   "url": "https://www.stylec.co.kr/trials/154644",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1771987837236.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:09:29",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "KINY 키니 리브인뮤즈 손상모 케어 샴푸 500ml",
+   "url": "https://www.stylec.co.kr/trials/154507",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791786091047.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:09:57",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[리앤핏] 물만 넣어도 맛있는 단백질쉐이크 - 리앤핏 단백질쉐이크 파우치 인스타그램 릴스 체험단 (4)",
+   "url": "https://www.stylec.co.kr/trials/154843",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788428171555.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:10:22",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[향수 덕후 모집!] 라플론 향수 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/154451",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791768112286.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:10:50",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 블로그 | 3차] (신청 사유 확인 필수) 국내생산 KF94 새부리형 마스크 50장",
+   "url": "https://www.stylec.co.kr/trials/154827",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792459032232.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:11:19",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[비타민마을] 알파CD 효소워터 보리차맛",
+   "url": "https://www.stylec.co.kr/trials/154543",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1781507148511.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:11:42",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[인스타그램 릴스 | 4차] (신청사유 확인필수) 세울 필요 없이 스스로 서는 물때 방지 욕실화",
+   "url": "https://www.stylec.co.kr/trials/153680",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792112172148.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:12:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "레디 보이 슈퍼 하이드레이팅 실키 선크림",
+   "url": "https://www.stylec.co.kr/trials/153866",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1769579944275.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:12:35",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[제공형] 센텔라모어 선세럼",
+   "url": "https://www.stylec.co.kr/trials/154865",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792462949137.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:12:57",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[퓨리영] 피디알엔 바이옴 리페어크림 피부과&에스테틱화장품",
+   "url": "https://www.stylec.co.kr/trials/154636",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782097095664.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:13:25",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "베이비드래곤 MEW 고급 아세테이트 뿔테안경",
+   "url": "https://www.stylec.co.kr/trials/152902",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1789021451805.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:13:46",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[맨픽스] 남성 밸런스 영양제 버스트버닝",
+   "url": "https://www.stylec.co.kr/trials/153850",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792127877970.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:14:15",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "브리올 화이트닝 치아 미백치약",
+   "url": "https://www.stylec.co.kr/trials/154358",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792381408089.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:14:45",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[정가 32,900원] 본아페티 강아지 고기능성 호흡+기관지 영양제 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/153168",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792026231016.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:15:14",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[풀리] 포어 펩타이드 피지 멜팅 크림 투 오일",
+   "url": "https://www.stylec.co.kr/trials/152892",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791957965917.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:15:43",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "베이비드래곤 블루라이트차단 안경 (블루라이트+근적외선차단렌즈 추가증정)",
+   "url": "https://www.stylec.co.kr/trials/153854",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1764154372395.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:16:13",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "호주산 프로폴리스 스프레이",
+   "url": "https://www.stylec.co.kr/trials/154852",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1768360951532.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:16:43",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "치과에서 만든 미백 톤업파우더 '스노우플러스'",
+   "url": "https://www.stylec.co.kr/trials/154503",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792393365931.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:17:06",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "UPLG 메인로고 시그니처 머슬핏 반팔 (블랙 M) 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/154449",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1789012168384.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:17:35",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버클립] 메디케이 나이아신아마이드10% 앰플 50ml 피지 모공축소 미백 광채 보습캡슐 피부결 톤세럼",
+   "url": "https://www.stylec.co.kr/trials/154469",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791877805068.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:18:03",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 블로그 | 3차] (신청 사유 확인 필수) 숨쉬기 편한 KF94 새부리형 마스크 50장",
+   "url": "https://www.stylec.co.kr/trials/154824",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792459233023.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:18:25",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "레디 보이 슈퍼 리치 실키 영양 에멀젼",
+   "url": "https://www.stylec.co.kr/trials/153865",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1768292106518.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:18:50",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[55도 커피] 고소하고 달콤한 77도 블렌드 원두(홀빈) 100g (제주도 배송 불가)",
+   "url": "https://www.stylec.co.kr/trials/154803",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1778138296848.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:19:20",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[제공형] 센텔라모어 선세럼",
+   "url": "https://www.stylec.co.kr/trials/154858",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792461729882.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:19:49",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "치과에서 만든 미백 톤업파우더 '스노우플러스'",
+   "url": "https://www.stylec.co.kr/trials/154532",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791798139845.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:20:19",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[MONOHOUR] 비건인증 모노아워 고체탈취제로 실내부터 차량까지 냄새 걱정 끝! 클립 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/154938",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791276979463.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:20:46",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[정가 43,800원] 본아페티 고양이 장+유산 기능성 건식사료균 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/153136",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792024883738.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:21:16",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[하이헬스] 석류콜라겐 20g x 80포",
+   "url": "https://www.stylec.co.kr/trials/153560",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792054049650.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:21:45",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "구수한 아메리카노맛! 다이어트 순환 관리 붓기차, 리얼팥차",
+   "url": "https://www.stylec.co.kr/trials/154517",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788407795287.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:22:16",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[나인위시스] 비건 화이트 톤업 크림 50ml  - 인스타그램 체험단",
+   "url": "https://www.stylec.co.kr/trials/155013",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1776840319962.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:22:44",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "프로폴리스 스프레이",
+   "url": "https://www.stylec.co.kr/trials/154851",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1786437121044.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:23:12",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 클립 | 3차] (신청 사유 확인 필수) 숨쉬기 편한 KF94 새부리형 마스크 50장",
+   "url": "https://www.stylec.co.kr/trials/154823",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792459253207.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:23:41",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버클립] 메디케이 레티놀 엑스퍼트 0.1 크림 30ml 눈가 팔자주름 탄력 모공 타이트 저자극 안티에이징 눈밑 리프팅",
+   "url": "https://www.stylec.co.kr/trials/154528",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791792203464.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:24:11",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[클리오네 프라임] 브로우 톤 체인저 탈색제 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/152740",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791937566599.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:24:40",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[로블루] 비릿한 정수리 냄새제거 78.94%피지산화 사이클을 끊는 정수리냄새제거 샴푸",
+   "url": "https://www.stylec.co.kr/trials/153547",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792052975453.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:25:11",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[약국 브랜드 앨리스랩]  피부뿐 아니라 모발까지! 콜라겐 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/154879",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792463396203.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:25:42",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[정가 39,600원] 본아페티 고양이 구강면역력 기능성 건식사료 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/153133",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792024243883.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:26:11",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[갓생러 모집!] 바이탈라이즈 순수가바 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/153773",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792054959718.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:26:39",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[갓생러 모집!] 바이탈라이즈 순수가바 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/153774",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792054959718.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:27:07",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[비타민마을] 알파CD 효소워터 보리차맛",
+   "url": "https://www.stylec.co.kr/trials/155091",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1781507148511.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:27:27",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "하루반 씬쉐이프보정 팬츠",
+   "url": "https://www.stylec.co.kr/trials/155042",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1772177021964.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:27:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[메디트리] 쾌변비움 차전자피 식이섬유",
+   "url": "https://www.stylec.co.kr/trials/154920",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792470454788.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:28:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[비타민마을] 알파CD 효소워터 보리차맛",
+   "url": "https://www.stylec.co.kr/trials/155089",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1781507148511.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:28:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[하이헬스]시크릿 이너가든 생 유산균",
+   "url": "https://www.stylec.co.kr/trials/153566",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792054544993.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:29:26",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "구수한 아메리카노맛! 출산 후 순환 관리 붓기차, 리얼팥차",
+   "url": "https://www.stylec.co.kr/trials/153010",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788407795287.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:29:56",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[디어랩스] 울애기쌩쌩 프리미엄 연어 스팀 베이크드 수제 사료 (눈/피부/관절/체중관리)",
+   "url": "https://www.stylec.co.kr/trials/152749",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791939696366.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:30:25",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[래디웰] 장 컨디션별 맞춤형 래디웰 밸런스/센시티브/클리어런스 퍼스널 유산균 3종 - 인스타 릴스 (4)",
+   "url": "https://www.stylec.co.kr/trials/154847",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785463734766.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:30:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[제공형] 센텔라모어 선세럼",
+   "url": "https://www.stylec.co.kr/trials/154859",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792462681136.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:31:16",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[풋필터] 닥터 메모리 푹신한 메모리폼 깔창 블로그 21차",
+   "url": "https://www.stylec.co.kr/trials/154830",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1772446584949.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:31:43",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[유튜브 Shorts | 4차] (신청사유 확인 필수) 세울 필요 없이 스스로 서는 물때 방지 욕실화",
+   "url": "https://www.stylec.co.kr/trials/153675",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792112009072.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:32:13",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "하이헬스 여주즙",
+   "url": "https://www.stylec.co.kr/trials/153561",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792054366141.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:32:42",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "두피 트러블 sos / 두피건강을 위해 러브 루트라이트 두피앰플로  홈케어시작",
+   "url": "https://www.stylec.co.kr/trials/153801",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792121597029.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:33:04",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[밀리타] 커피 맛을 완성하는 프리미엄 밀리타 푸어오버 커피필터 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/154960",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792474892261.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:33:33",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[64,900원] 닥터토비아 카페인 헤어인핸싱폼 모낭활성제",
+   "url": "https://www.stylec.co.kr/trials/154910",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1769410669579.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:33:56",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[네이버 클립 | 3차] (신청 사유 확인 필수) 국내생산 KF94 새부리형 마스크 50장",
+   "url": "https://www.stylec.co.kr/trials/154826",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792458977532.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:34:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "손발온정 국산 생강 흑마늘 참당귀 치커리 HACCP인증 다온결정",
+   "url": "https://www.stylec.co.kr/trials/154357",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792380876356.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:34:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[BIBS X 무민] 쪽쪽이 유목민 주목! 무민 콜라보 라텍스 쪽쪽이 블로그 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/154937",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791276576176.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:35:31",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[풋필터] 아치까지 받쳐주는 발 편한 자세 교정 키높이 깔창 2set(1.5cm 1켤레 + 2.5cm 1켤레) 22차",
+   "url": "https://www.stylec.co.kr/trials/154831",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1767442401678.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:35:54",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[리노아랩] 리버스Q 12g x 10포 숙취해소제",
+   "url": "https://www.stylec.co.kr/trials/153557",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792053483438.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:36:23",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[하이헬스]락토페린 산양유 초유단백질",
+   "url": "https://www.stylec.co.kr/trials/153580",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792056957081.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:36:53",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "청궁 흑염소진액 3팩, 팩당 4,000원",
+   "url": "https://www.stylec.co.kr/trials/154907",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1734093799029.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:37:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[63,000원] 닥터토비아 모낭활성제 카페인 헤어인핸싱폼",
+   "url": "https://www.stylec.co.kr/trials/154912",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1769410833747.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:37:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[64,900원] 닥터토비아 모낭활성제 카페인 헤어인핸싱폼",
+   "url": "https://www.stylec.co.kr/trials/154911",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1769410833747.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:38:24",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "베이비드래곤 WALLIS 변색 선글라스 ( 실내에서는 투명하게 자외선을 받으면 선글라스로 착용가능 )",
+   "url": "https://www.stylec.co.kr/trials/154977",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1768129470862.gif",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:38:55",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[64,900원] 닥터토비아 모낭활성제 카페인 헤어인핸싱폼",
+   "url": "https://www.stylec.co.kr/trials/154913",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1769410899892.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:39:25",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "eSIM으로 간편하게 여행하자!",
+   "url": "https://www.stylec.co.kr/trials/154407",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791465466199.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-21 15:39:54",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "eSIM으로 간편하게 여행하자!",
+   "url": "https://www.stylec.co.kr/trials/154409",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791466006203.jpg",
    "img_checked": true
   }
  ]
