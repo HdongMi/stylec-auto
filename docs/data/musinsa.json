@@ -21,6 +21,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 267
+  },
+  {
+   "started_at": "2026-10-22 14:38:39",
+   "finished_at": "2026-10-22 15:18:12",
+   "status": "success",
+   "listed": 286,
+   "ok": 11,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 252
   }
  ],
  "records": [
@@ -253,7 +264,117 @@
    "image": "https://lime-you.com/web/upload/NNEditor/20261001/EB9DBCEC9E84EC9CA0-ED93A8EC96B4-EAB3A0ECB2B4ED96A5EC8898-EB82A8EC9E90ED96A5EC8898_18.jpg",
    "img_checked": true,
    "note": "FREE"
+  },
+  {
+   "at": "2026-10-22 14:39:08",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "니프니프 쿨 모이스트 마스크 5매 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48409",
+   "image": "https://image.msscdn.net/images/2026/10/20/750f83a4f6934c9982d6eec42456362b.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-22 14:39:24",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "스터니 러브 워크 크리에이트 에코백 아이보리 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48408",
+   "image": "https://image.msscdn.net/images/2026/10/15/909d3d3e623d444b9c7497a2660ad3a4.jpg",
+   "img_checked": true,
+   "note": "ONE SIZE"
+  },
+  {
+   "at": "2026-10-22 14:39:49",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "프리노어 오버라이드 스트링 오버핏 후드 네이비 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48386",
+   "image": "https://prinoar.cafe24.com/web/26fw/detail/p629924238_nv_05.jpg",
+   "img_checked": true,
+   "note": "기모(겨울) / XL"
+  },
+  {
+   "at": "2026-10-22 14:40:05",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "오드타입 락시 젤리 틴트 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48294",
+   "image": "https://image.msscdn.net/images/prd_img/20260720091347651903790216a5d683b9f287.jpg",
+   "img_checked": true,
+   "note": "253 백도화 Dohwa"
+  },
+  {
+   "at": "2026-10-22 14:40:19",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "브리사 뉴 그레이 치노 하프팬츠 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48291",
+   "image": "https://image.msscdn.net/thumbnails/community/preuser/images/a979934a-c84d-11f1-a638-bd2b52998de8.jpg",
+   "img_checked": true,
+   "note": "3"
+  },
+  {
+   "at": "2026-10-22 14:40:34",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "인세인개러지 인세인 베이직 라운드 넥 니트 핑크 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48127",
+   "image": "https://image.msscdn.net/thumbnails/community/preuser/images/31e67771-c6df-11f1-a638-f535a04f74f2.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-10-22 14:40:50",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "오드카리브 실키 케어 트리트먼트 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47931",
+   "image": "https://image.msscdn.net/images/2026/10/08/644cf690117245d7b84a73d23dd9cdc7.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-22 14:41:04",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "오드카리브 실키 밸런스 샴푸 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47930",
+   "image": "https://image.msscdn.net/images/2026/10/02/f40a91b8c7d94d4fb1c9497067b1e2d8.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-22 14:41:21",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "라임유 로맨틱 우디 고체 향수 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47719",
+   "image": "https://lime-you.com/web/upload/NNEditor/20260930/EB9DBCEC9E84EC9CA0-ED93A8EC96B4-EAB3A0ECB2B4ED96A5EC8898-EBA19CEBA7A8ED8BB1-EC9AB0EB9494_21.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-22 14:41:37",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "라임유 아로마틱 시트러스 고체 향수 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47718",
+   "image": "https://lime-you.com/web/upload/NNEditor/20260930/EB9DBCEC9E84EC9CA0-ED93A8EC96B4-EAB3A0ECB2B4ED96A5EC8898_EC9584EBA19CEBA788ED8BB1-EC8B9CED8AB8EB9FACEC8AA4_18.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-22 14:41:55",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "아이엠제이 몰튼 텍스 반지 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47329",
+   "image": "https://yunyuncompany.speedgabia.com/page/steel/R/Molten_tex_R/M.jpg",
+   "img_checked": true,
+   "note": "22호"
   }
  ],
- "updated_at": "2026-10-21 15:20:59"
+ "updated_at": "2026-10-22 15:18:12"
 }
