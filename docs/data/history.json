@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-23 13:47:24",
+ "updated_at": "2026-10-23 14:37:54",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -56,6 +56,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 2
+  },
+  {
+   "started_at": "2026-10-23 14:37:05",
+   "finished_at": "2026-10-23 14:37:54",
+   "status": "success",
+   "listed": 274,
+   "ok": 1,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 1
   }
  ],
  "records": [
@@ -3270,6 +3281,15 @@
    "title": "[릴스] 취업 준비를 성공으로 이끌 차별화된 면접인강!",
    "url": "https://www.stylec.co.kr/trials/155950",
    "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792654508434.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-23 14:37:49",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "레디 보이 CCC 오일볼 진정 세럼",
+   "url": "https://www.stylec.co.kr/trials/155426",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1768548645975.jpg",
    "img_checked": true
   }
  ]
