@@ -32,6 +32,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 252
+  },
+  {
+   "started_at": "2026-10-23 12:54:15",
+   "finished_at": "2026-10-23 13:36:45",
+   "status": "success",
+   "listed": 284,
+   "ok": 36,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 214
   }
  ],
  "records": [
@@ -374,7 +385,367 @@
    "image": "https://yunyuncompany.speedgabia.com/page/steel/R/Molten_tex_R/M.jpg",
    "img_checked": true,
    "note": "22호"
+  },
+  {
+   "at": "2026-10-23 12:54:48",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "알엑스엠씨 픽셀 크로스 헤비 웨이트 와이드 팬츠 체험단 20명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48533",
+   "image": "https://image.msscdn.net/images/2026/09/27/87dcf725669646e7ab198c51db13a0f3.jpg",
+   "img_checked": true,
+   "note": "픽셀 크로스 헤비 웨이트 와이드 팬츠 [블랙] / 블랙 / L"
+  },
+  {
+   "at": "2026-10-23 12:55:05",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "쿠톤 헤비웨이트 원 머스트 이글 오버핏 후디 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48530",
+   "image": "https://gi.esmplus.com/reve0601/2026FW%20%EC%BF%A0%ED%86%A4/%EC%AD%88%EB%A6%AC%20%ED%9B%84%EB%94%94/%EC%AD%88%EB%A6%AC-%EB%94%94%ED%85%8C%EC%9D%BC-%EA%B3%B5%ED%86%B5.jpg",
+   "img_checked": true,
+   "note": "블랙_그레이 / XL"
+  },
+  {
+   "at": "2026-10-23 12:55:24",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "파우치24 퀸즈밤 보습 진정 멀티밤 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48510",
+   "image": "https://image.msscdn.net/thumbnails/community/preuser/images/b15a22f5-cba6-11f1-a638-53f586906185.png",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 12:55:43",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 루즈드 와이드 데님 팬츠 빈티지 블루 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48495",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-DN10VB/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-23 12:56:01",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 루즈드 와이드 데님 팬츠 미드 블루 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48494",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-DN09MBL/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-23 12:56:18",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 다이드 데미지 코튼 니트 블랙 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48493",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-KN06BK/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-23 12:56:43",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 다이드 데미지 코튼 니트 카키 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48492",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-KN06KK/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-23 12:57:01",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "이스트코 2135 피그먼트 컴팩트 스웨트셔츠 체험단 15명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48487",
+   "image": "https://image.msscdn.net/images/2026/10/19/80064a650b42401baad3ba2c12a42331.jpg",
+   "img_checked": true,
+   "note": "스톤 브라운 / SMALL"
+  },
+  {
+   "at": "2026-10-23 12:57:17",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "클립더문 락캡 투톤 블루 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48485",
+   "image": "https://image.msscdn.net/images/prd_img/202603121416096132896558669b24c1995bb5.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 12:57:36",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "후러브스아트 와플 헨리넥 롱 슬리브 티셔츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48477",
+   "image": "https://wholovesartm.cafe24.com/2026/1006.jpg",
+   "img_checked": true,
+   "note": "와플 헨리넥 롱 슬리브 티셔츠 그레이 / L"
+  },
+  {
+   "at": "2026-10-23 12:57:55",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "후러브스아트 세미 크롭 헨리넥 니트 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48476",
+   "image": "https://wholovesartm.cafe24.com/2026/1009.jpg",
+   "img_checked": true,
+   "note": "세미 크롭 헨리넥 니트 블랙 / L"
+  },
+  {
+   "at": "2026-10-23 12:58:15",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "후러브스아트 레이어드 헨리넥 롱 슬리브 티셔츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48475",
+   "image": "https://wholovesartm.cafe24.com/2026/1001.jpg",
+   "img_checked": true,
+   "note": "레이어드 헨리넥 롱 슬리브 티셔츠 블랙 / L"
+  },
+  {
+   "at": "2026-10-23 12:58:32",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "키페 키페 볼캡 워싱네이비 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48465",
+   "image": "https://kifferofficial.openhost.cafe24.com/web/product/cap/cap-05-01-01.jpg",
+   "img_checked": true,
+   "note": "washing navy"
+  },
+  {
+   "at": "2026-10-23 12:58:50",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "캘빈클라인 진 유니섹스 쉬어 후드 라이트 다운 자켓 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48456",
+   "image": "https://calvinklein.pdpcloud.net/ecom/26FW/CKJ/A4RH564G-WKR/detail/A4RH564G-WKR-pdp_sizeinfo.jpg",
+   "img_checked": true,
+   "note": "Thunderstorm / XL"
+  },
+  {
+   "at": "2026-10-23 12:59:06",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "캘빈클라인 진 유니섹스 쉬어 후드 라이트 다운 자켓 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48455",
+   "image": "https://calvinklein.pdpcloud.net/ecom/26FW/CKJ/A4RH564G-CHZ/detail/A4RH564G-CHZ-pdp_sizeinfo.jpg",
+   "img_checked": true,
+   "note": "Nimbus Cloud / XL"
+  },
+  {
+   "at": "2026-10-23 12:59:25",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "트립르센스 텍스쳐드 더블 포켓 울셔츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48443",
+   "image": "https://evenandodd.cafe24.com/26Winter/SH05/BK(1).jpg",
+   "img_checked": true,
+   "note": "텍스쳐드 더블 포켓 울셔츠_블랙 / L"
+  },
+  {
+   "at": "2026-10-23 12:59:44",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "트립르센스 코튼 컨투어 사이드 라인 팬츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48442",
+   "image": "https://evenandodd.cafe24.com/26fall/TS26FWPT02WK.jpg",
+   "img_checked": true,
+   "note": "코튼 컨투어 사이드 라인 팬츠_워시드 블랙 / L"
+  },
+  {
+   "at": "2026-10-23 12:59:58",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "에이지오브파라마운트 에이지 캡 브라운 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48439",
+   "image": "https://image.msscdn.net/images/2026/09/04/316f77880d534ae99d519992a8024ba9.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:00:14",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "에이지오브파라마운트 에이지 캡 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48438",
+   "image": "https://image.msscdn.net/images/2026/09/04/ea0255ecf83348c8bbd94c44ca421891.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:00:29",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "에이지오브파라마운트 에이지 캡 더스트 핑크 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48436",
+   "image": "https://image.msscdn.net/images/2026/09/04/8099352517f2435d8af980d21f4d437e.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:00:46",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "난데 옥스포드 크롭 긴팔 하프 셔츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48432",
+   "image": "https://image.msscdn.net/images/2026/10/12/7e1cf6f3d2fe4eb7a905fc2a8288ac76.jpg",
+   "img_checked": true,
+   "note": "블랙 / XXL"
+  },
+  {
+   "at": "2026-10-23 13:01:00",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "데이워커 슬림한 뿔테 자이스 블루라이트 차단 안경 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48429",
+   "image": "https://image.msscdn.net/images/prd_img/20260512130736630256657666a02a78899df9.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:01:17",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "버튼서울 소프트 니트 머플러 바라클라바 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48426",
+   "image": "https://image.msscdn.net/images/prd_img/202601091104006781049766769606210a58e5.jpg",
+   "img_checked": true,
+   "note": "블랙"
+  },
+  {
+   "at": "2026-10-23 13:01:40",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "제옥스 레이탄 드레스 레이스업 슈즈 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48424",
+   "image": "https://leehj312.openhost.cafe24.com/26FW/GX/9GX3QA6F1R.jpg",
+   "img_checked": true,
+   "note": "블랙 / 275(44)"
+  },
+  {
+   "at": "2026-10-23 13:02:01",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "제옥스 마시미아노 페니 로퍼 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48421",
+   "image": "https://leehj312.openhost.cafe24.com/26FW/GX/9GXH9A6F1M.jpg",
+   "img_checked": true,
+   "note": "블랙 / 275(44)"
+  },
+  {
+   "at": "2026-10-23 13:02:23",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "제옥스 스네이크 남성 스니커즈 탄 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48418",
+   "image": "https://leehj312.openhost.cafe24.com/26FW/GX/9GXNVA6F5S.jpg",
+   "img_checked": true,
+   "note": "탄 / 275(44)"
+  },
+  {
+   "at": "2026-10-23 13:02:42",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 파번 7733 슈퍼 와이드핏 머드인디고 데님팬츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48417",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Denim/7733MI1.jpg",
+   "img_checked": true,
+   "note": "32"
+  },
+  {
+   "at": "2026-10-23 13:02:59",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 아쿠스 7732 커브드 머드인디고 데님팬츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48416",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Denim/7732DI1.jpg",
+   "img_checked": true,
+   "note": "34"
+  },
+  {
+   "at": "2026-10-23 13:03:17",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 아쿠스 7731 원턱 커브드 미디움인디고 데님팬츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48415",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Denim/7731MI1.jpg",
+   "img_checked": true,
+   "note": "34"
+  },
+  {
+   "at": "2026-10-23 13:03:35",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 아쿠스 7731 원턱 커브드 다크인디고 데님팬츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48414",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Denim/7731DI1.jpg",
+   "img_checked": true,
+   "note": "34"
+  },
+  {
+   "at": "2026-10-23 13:03:49",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "캠퍼스 블라썸 비건 무자극 닦토 두유 토너패드 66매 체험단 20명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48412",
+   "image": "https://image.musinsa.com/images/prd_img/2022091318135800000059844.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:04:08",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "카인드오브 바 플로우 와이 목걸이 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48411",
+   "image": "https://webimg.jestina.co.kr/UpData/temporary/kindof/KJOFN06B5003BT700_2.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:04:25",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "에스더블유나인틴 미드나잇 오 드 퍼퓸 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48352",
+   "image": "https://image.msscdn.net/images/2026/10/21/945dea64aad64ded8bb3000df851c906.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:04:40",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "더여백26 푸딩이 모델링팩 300 및 팩도구 3종 체험단 20명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48112",
+   "image": "https://image.msscdn.net/images/prd_img/202510200743151150564571468f569831c178.png",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:05:02",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "라임유 시트러스 마린 고체 향수 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47721",
+   "image": "https://lime-you.com/web/upload/NNEditor/20260930/copy-1790750488-EB9DBCEC9E84EC9CA0-ED93A8EC96B4-EAB3A0ECB2B4ED96A5EC8898_EC8B9CED8AB8EB9FACEC8AA4-EBA788EBA6B0_18.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-23 13:05:19",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "라임유 마일드 코튼 고체 향수 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/47720",
+   "image": "https://lime-you.com/web/upload/NNEditor/20260930/EB9DBCEC9E84EC9CA0-ED93A8EC96B4-EAB3A0ECB2B4ED96A5EC8898-EBA8B8EC958CEB939C-ECBD94ED8ABC_01_18.jpg",
+   "img_checked": true,
+   "note": "FREE"
   }
  ],
- "updated_at": "2026-10-22 15:18:12"
+ "updated_at": "2026-10-23 13:36:45"
 }
