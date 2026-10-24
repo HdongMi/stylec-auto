@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-23 14:37:54",
+ "updated_at": "2026-10-24 14:47:43",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -64,6 +64,17 @@
    "listed": 274,
    "ok": 1,
    "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 1
+  },
+  {
+   "started_at": "2026-10-24 14:16:24",
+   "finished_at": "2026-10-24 14:47:43",
+   "status": "success",
+   "listed": 387,
+   "ok": 120,
+   "check": 2,
    "manual": 0,
    "fail": 0,
    "skip": 1
@@ -3290,6 +3301,1104 @@
    "title": "레디 보이 CCC 오일볼 진정 세럼",
    "url": "https://www.stylec.co.kr/trials/155426",
    "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1768548645975.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:16:58",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[오브제] 플라즈마 클리어 부스터 + 아크샷  트러블 진정 세럼",
+   "url": "https://www.stylec.co.kr/trials/156566",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792747215353.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:17:29",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[마르비니] 프리미엄 디퓨저 호텔무드 1SET",
+   "url": "https://www.stylec.co.kr/trials/156484",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792735709195.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:17:41",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 펠체아주라 바디크림 오리지널 250ml",
+   "url": "https://www.stylec.co.kr/trials/156218",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792560458693.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:17:55",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "그날의 냄새 걱정 없이 믿고 쓰는 국내 생산 유기농 '블루블루' 생리대♡",
+   "url": "https://www.stylec.co.kr/trials/156246",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1790823456087.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:18:08",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 로쎄 하이드라 글로우 세럼 * 1개",
+   "url": "https://www.stylec.co.kr/trials/156518",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792742507976.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:18:30",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 로쎄 하이드라 글로우 크림 * 1개",
+   "url": "https://www.stylec.co.kr/trials/156522",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792746307245.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:18:50",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[마르비니] 프리미엄 디퓨저 아마로 디 솔레 1SET",
+   "url": "https://www.stylec.co.kr/trials/156470",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792735709195.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:19:05",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 로쎄 하이드라 카밍 크림 * 1개",
+   "url": "https://www.stylec.co.kr/trials/156528",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792746781622.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:19:26",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리포데이] 올인원 우먼팩 1박스(30개입 / 1개월분)",
+   "url": "https://www.stylec.co.kr/trials/156283",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1783402689824.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:19:39",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그] 로쎄 하이드라 카밍 세럼 * 1개",
+   "url": "https://www.stylec.co.kr/trials/156525",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792746622994.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:20:01",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[뉴칸] 올인원영양제 우먼맥스팩(2)",
+   "url": "https://www.stylec.co.kr/trials/156465",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788341788972.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:20:13",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴스] 경북 문경에서 자연의 에너지를 가득 품고 자란 후지 사과!",
+   "url": "https://www.stylec.co.kr/trials/156391",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792736451710.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:20:27",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[메디테라피] 예쁜 생얼 루틴",
+   "url": "https://www.stylec.co.kr/trials/156251",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792726132304.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:20:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[제품 제공] 물먹는 매직 행주 주방 행주",
+   "url": "https://www.stylec.co.kr/trials/156529",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791724068203.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:21:01",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리쥬파인]볼륨샷 에센스",
+   "url": "https://www.stylec.co.kr/trials/156498",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792739679538.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:21:23",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "공항에서 가장 눈에 띄는 캐리어, 라브라크",
+   "url": "https://www.stylec.co.kr/trials/156464",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792742221778.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:21:45",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "밥풀부터 기름끼까지 싹! 콤팩트하고 강력해진 참그린 식기세척기용 타블렛",
+   "url": "https://www.stylec.co.kr/trials/156131",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792712636070.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:21:57",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴스] 경북 문경에서 자연의 에너지를 가득 품고 자란 사과! (혼합)",
+   "url": "https://www.stylec.co.kr/trials/156384",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792736312516.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:22:11",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[뉴칸] 올인원영양제 우먼맥스팩(1)",
+   "url": "https://www.stylec.co.kr/trials/156441",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788341788972.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:22:24",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "공항에서 가장 눈에 띄는 캐리어, 라브라크",
+   "url": "https://www.stylec.co.kr/trials/156460",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792742221778.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:22:38",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[릴스] 경북 문경에서 자연의 에너지를 가득 품고 자란 감홍 사과!",
+   "url": "https://www.stylec.co.kr/trials/156381",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792735762119.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:22:50",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "쿠팡 추천 색이변하는 김홍도 술잔 4p 세트 색변하는 선비 소주잔 (얼굴빨개지는 예쁜 취객 벚꽃 잔 이쁜 집들이 선물), 1세트, 김홍도 화풍",
+   "url": "https://www.stylec.co.kr/trials/156493",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792744352777.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:23:02",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[안탈라] 스노우레드 VPDRN 콜라겐 하이드로겔 마스크",
+   "url": "https://www.stylec.co.kr/trials/156452",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792741503462.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:23:23",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리무브] 가슴 모양을 예쁘게 잡아주는 '이지핏 볼륨업 스킨브라' 블로그 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/156532",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792746876771.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:23:46",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[스킨투엠투] 쉴드 365 에이지리스 자생 캡슐 선크림 60ml",
+   "url": "https://www.stylec.co.kr/trials/156135",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784602777506.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:24:09",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리무브] 안입은듯한 편안함, '이지핏 스킨브라' 블로그 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/156527",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792744239129.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:24:30",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리포데이] 올인원 우먼팩 1박스(30개입 / 1개월분)",
+   "url": "https://www.stylec.co.kr/trials/156422",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1783475141641.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:24:46",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "히말라야 파티스마트 베리&망고 10P",
+   "url": "https://www.stylec.co.kr/trials/156401",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1779060867202.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:24:59",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "랩티젠, 가벼움을 위한 확실한 식전 루틴",
+   "url": "https://www.stylec.co.kr/trials/156282",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791958560781.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:25:11",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[긴급모집] 코코맑음삼백초 1박스 비염영양제",
+   "url": "https://www.stylec.co.kr/trials/156649",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792763957689.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:25:24",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "그날의 냄새 걱정 없이 믿고 쓰는 국내 생산 유기농 '블루블루' 생리대♡",
+   "url": "https://www.stylec.co.kr/trials/156247",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1790823456087.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:25:38",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리쥬파인]볼륨샷 에센스",
+   "url": "https://www.stylec.co.kr/trials/156531",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792739679538.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:25:54",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[제품 제공] 초극세사 물먹는 매직 행주 주방 행주 요술 행주",
+   "url": "https://www.stylec.co.kr/trials/156530",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791724634747.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:26:07",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[뉴칸] 올인원영양제 우먼맥스팩(2)",
+   "url": "https://www.stylec.co.kr/trials/156467",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788341788972.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:26:19",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[스킨투엠투] 쉴드 365 에이지리스 자생 캡슐 선크림 60ml",
+   "url": "https://www.stylec.co.kr/trials/156136",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784602777506.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:26:33",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "생기 넘치는 토끼 혀를 위한 틴트 필름♡",
+   "url": "https://www.stylec.co.kr/trials/156421",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791337322280.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:26:47",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리포데이] 올인원 우먼팩 1박스(30개입 / 1개월분)",
+   "url": "https://www.stylec.co.kr/trials/156404",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1783402689824.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:27:06",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "히말라야 파티스마트 베리&망고 10P",
+   "url": "https://www.stylec.co.kr/trials/156402",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1779061203654.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:27:19",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[뉴칸] 올인원영양제 우먼맥스팩(1)",
+   "url": "https://www.stylec.co.kr/trials/156454",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788341788972.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:27:42",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "도미(dormie) T200PRO 골프거리측정기_화이트 색상 _제품형[39만 원 상당 제공]",
+   "url": "https://www.stylec.co.kr/trials/156494",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1786584887374.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:28:02",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[유유제약] 전립엔 쏘팔메토 옥타코사놀",
+   "url": "https://www.stylec.co.kr/trials/156200",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1778661424728.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:28:22",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "치과에서 만든 미백 톤업파우더 '스노우플러스'",
+   "url": "https://www.stylec.co.kr/trials/156463",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792393365931.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:28:41",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[고형분 60%] 역대급 함량! 위 건강에 좋은 국내산 밤꿀까지 넣어 맛있는 양배추스틱",
+   "url": "https://www.stylec.co.kr/trials/156487",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782978031288.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:28:53",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "<초등영문법>우주에서 가장 쉬운 영어 문법 <우가문>",
+   "url": "https://www.stylec.co.kr/trials/156434",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792738975751.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:29:15",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "도미(Dormie) T80 _블랙 _골프거리측정기 /클래식  [20만 원 상당]",
+   "url": "https://www.stylec.co.kr/trials/156508",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788420010685.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:29:35",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[어텐티]텐더케어크림",
+   "url": "https://www.stylec.co.kr/trials/156244",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1757917349737.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:29:56",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 더블유 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156307",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774145508543.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:30:09",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "베이비드래곤 블루라이트차단 안경 (블루라이트+근적외선차단렌즈 무료장착)",
+   "url": "https://www.stylec.co.kr/trials/156357",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1772106346620.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:30:24",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[양배추 6통] 역대급 함량! 위 건강에 좋은 국내산 밤꿀까지 넣어 맛있는 양배추스틱",
+   "url": "https://www.stylec.co.kr/trials/156491",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1782978031288.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:30:37",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "1960NY 퓨어 뷰티 크림",
+   "url": "https://www.stylec.co.kr/trials/156582",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792757258998.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:30:51",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 3-Step Advanced Kit",
+   "url": "https://www.stylec.co.kr/trials/156589",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792759332727.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:31:06",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Clarifying Toner",
+   "url": "https://www.stylec.co.kr/trials/156579",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1770906563886.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:31:20",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Emulsion",
+   "url": "https://www.stylec.co.kr/trials/156581",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792756850208.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:31:34",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 21호",
+   "url": "https://www.stylec.co.kr/trials/156587",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792758778812.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:31:48",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Soap",
+   "url": "https://www.stylec.co.kr/trials/156610",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792762717471.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:31:59",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 3-Step Advanced Kit",
+   "url": "https://www.stylec.co.kr/trials/156425",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774006275407.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:32:12",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156333",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774144477864.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:32:24",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 엠 헤어 로스 샴푸 포 맨",
+   "url": "https://www.stylec.co.kr/trials/156361",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1777548901113.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:32:39",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[인스타/피드] 다이비프로 포켓다이브 접이식 스노클링 마스크* 1개 (색상: 랜덤 발송)",
+   "url": "https://www.stylec.co.kr/trials/156446",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785743021938.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:32:59",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 엠 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156596",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792760682970.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:33:12",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Body Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156608",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792762443823.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:33:25",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 2-Step Basic Kit",
+   "url": "https://www.stylec.co.kr/trials/156580",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792756537125.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:33:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 3-Step",
+   "url": "https://www.stylec.co.kr/trials/156586",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792758305976.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:33:54",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Acne Cleansing Foam",
+   "url": "https://www.stylec.co.kr/trials/156584",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792757739269.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:34:08",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 3-Step Advanced Kit",
+   "url": "https://www.stylec.co.kr/trials/156492",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774159698739.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:34:21",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 3-Step Advanced Kit",
+   "url": "https://www.stylec.co.kr/trials/156576",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792753605544.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:34:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸 포 맨",
+   "url": "https://www.stylec.co.kr/trials/156620",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792764339256.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:34:55",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156590",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792759623901.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:35:10",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Face Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156583",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792757504426.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:35:23",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 23호",
+   "url": "https://www.stylec.co.kr/trials/156588",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792758778812.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:35:37",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Soap",
+   "url": "https://www.stylec.co.kr/trials/156500",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774160547764.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:35:51",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 더블유 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156585",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792758040352.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:36:05",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Body Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156426",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774143813498.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:36:17",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Soap",
+   "url": "https://www.stylec.co.kr/trials/156428",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774143654460.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:36:32",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 2-Step Basic Kit",
+   "url": "https://www.stylec.co.kr/trials/156437",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774159836108.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:36:46",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[인스타/피드] 다이비프로 스노쿨링 마스크 * 1개 (색상: 랜덤 발송)",
+   "url": "https://www.stylec.co.kr/trials/156443",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785742144442.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:37:00",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[인스타/피드] 다이비프로 선글라스 물안경 * 1개 (색상: 랜덤 발송)",
+   "url": "https://www.stylec.co.kr/trials/156444",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785743272615.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:37:14",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 더블유 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156453",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774161311371.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:37:26",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD  3-Step",
+   "url": "https://www.stylec.co.kr/trials/156317",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774158622269.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:37:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 21호",
+   "url": "https://www.stylec.co.kr/trials/156325",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774145739062.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:37:54",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸 포 맨",
+   "url": "https://www.stylec.co.kr/trials/156352",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1777548733047.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:38:06",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Clarifying Toner",
+   "url": "https://www.stylec.co.kr/trials/156436",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774159056585.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:38:18",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Emulsion",
+   "url": "https://www.stylec.co.kr/trials/156438",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774159979740.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:38:31",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Acne Cleansing Foam",
+   "url": "https://www.stylec.co.kr/trials/156448",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774160121305.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:38:51",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 21호",
+   "url": "https://www.stylec.co.kr/trials/156459",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774161708117.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:39:04",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 워터풀 로션",
+   "url": "https://www.stylec.co.kr/trials/156616",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792763521107.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:39:19",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 바이 바이 미스터 세범",
+   "url": "https://www.stylec.co.kr/trials/156591",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792759865277.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:39:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 워터풀 로션",
+   "url": "https://www.stylec.co.kr/trials/156592",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792760198339.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:39:55",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸 포 맨",
+   "url": "https://www.stylec.co.kr/trials/156594",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792760396364.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:40:07",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 에너지 파워 크림",
+   "url": "https://www.stylec.co.kr/trials/156614",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792763373961.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:40:20",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 에너지 파워 크림",
+   "url": "https://www.stylec.co.kr/trials/156606",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792762462106.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:40:33",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 3-Step",
+   "url": "https://www.stylec.co.kr/trials/156565",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792751658736.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:40:46",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "1960NY 퓨어 뷰티 크림",
+   "url": "https://www.stylec.co.kr/trials/156550",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792750451877.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:41:01",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD  에너지 파워 크림",
+   "url": "https://www.stylec.co.kr/trials/156489",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774162377912.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:41:14",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Body Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156495",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774160635869.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:41:28",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 바이 바이 미스터 세범",
+   "url": "https://www.stylec.co.kr/trials/156618",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792763925959.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:41:42",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Clarifying Toner",
+   "url": "https://www.stylec.co.kr/trials/156514",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1770993622923.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:41:57",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 엠 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156481",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1777618400919.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:42:19",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸 포 맨",
+   "url": "https://www.stylec.co.kr/trials/156478",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1777618190692.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:42:35",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 워터풀 로션",
+   "url": "https://www.stylec.co.kr/trials/156475",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774162257157.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:42:49",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 바이 바이 미스터 세범",
+   "url": "https://www.stylec.co.kr/trials/156472",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774162152108.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:43:11",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156469",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774161205779.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:43:26",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 2-Step Basic Kit",
+   "url": "https://www.stylec.co.kr/trials/156543",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1770992962723.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:43:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Emulsion",
+   "url": "https://www.stylec.co.kr/trials/156547",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792750207979.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:43:53",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Soap",
+   "url": "https://www.stylec.co.kr/trials/156578",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792754777025.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:44:07",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Face Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156553",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792750747012.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:44:22",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Acne Cleansing Foam",
+   "url": "https://www.stylec.co.kr/trials/156555",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792751040815.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:44:36",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 더블유 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156557",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792751320045.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:44:50",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 23호",
+   "url": "https://www.stylec.co.kr/trials/156462",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774161480662.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:45:00",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 21호",
+   "url": "https://www.stylec.co.kr/trials/156568",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792752159799.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:45:14",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "COVERON 톤업 비비크림 23호",
+   "url": "https://www.stylec.co.kr/trials/156569",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792752159799.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:45:27",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 매직 스트레이트 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156570",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792752646153.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:45:41",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "HAMOCELL 엠 헤어 로스 샴푸",
+   "url": "https://www.stylec.co.kr/trials/156575",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792753001893.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:45:54",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Body Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156577",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792753983573.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:46:06",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Acne Cleansing Foam",
+   "url": "https://www.stylec.co.kr/trials/156290",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774143408051.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:46:21",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "COVERON 톤업 비비크림 23호",
+   "url": "https://www.stylec.co.kr/trials/156329",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774145632835.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:46:35",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 바이 바이 미스터 세범",
+   "url": "https://www.stylec.co.kr/trials/156337",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1773915997623.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:46:48",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD 워터풀 로션",
+   "url": "https://www.stylec.co.kr/trials/156347",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774158307945.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:46:59",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD  에너지 파워 크림",
+   "url": "https://www.stylec.co.kr/trials/156368",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774158525260.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:47:14",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "1960NY 퓨어 뷰티 크림",
+   "url": "https://www.stylec.co.kr/trials/156442",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1770818697655.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:47:27",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "TS 트러블 솔루션 Face Scrub Towel",
+   "url": "https://www.stylec.co.kr/trials/156445",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774158808442.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-24 14:47:38",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "BOSOD  3-Step",
+   "url": "https://www.stylec.co.kr/trials/156457",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774162484575.png",
    "img_checked": true
   }
  ]
