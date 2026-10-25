@@ -65,6 +65,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 214
+  },
+  {
+   "started_at": "2026-10-25 14:33:17",
+   "finished_at": "2026-10-25 15:04:25",
+   "status": "success",
+   "listed": 284,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 214
   }
  ],
  "records": [
@@ -769,5 +780,5 @@
    "note": "FREE"
   }
  ],
- "updated_at": "2026-10-24 14:47:28"
+ "updated_at": "2026-10-25 15:04:25"
 }
