@@ -10,6 +10,7 @@
   python stylec_auto.py                               # 미리보기 (어떤 체험단을 신청할지 확인만)
   python stylec_auto.py --apply --max 10              # 실제로 최대 10개 신청
   python stylec_auto.py --apply --include 화장품,헤어 --exclude 방문형
+  python stylec_auto.py --apply --exclude-sns ""      # 인스타그램 체험단도 신청 (기본은 제외)
   python stylec_auto.py --export-session              # GitHub Actions 용 로그인 상태 내보내기
   python stylec_auto.py --apply --history docs/data/history.json   # 대시보드 기록 남기기
 """
@@ -51,6 +52,13 @@ DETAIL_PATTERNS = [
     re.compile(r"/trials/view/\d+"),
     re.compile(r"[?&]wr_id=\d+"),
 ]
+
+# 이 채널로만 리뷰를 쓰는 체험단은 신청하지 않음 (--exclude-sns 로 바꿀 수 있음, 빈 값이면 끔)
+DEFAULT_EXCLUDE_SNS = "인스타그램,인스타,instagram,릴스,reels"
+# 위 채널과 함께 이 채널도 고를 수 있으면 신청함 (신청서에서는 이 채널을 고름)
+OTHER_CHANNELS = ["블로그", "blog", "네이버", "유튜브", "youtube", "틱톡", "tiktok", "클립", "쇼츠", "shorts",
+                  "구매평", "카페", "스토어", "리뷰"]
+CHANNEL_KEY_RE = re.compile(r"sns|channel|media|platform|reels|insta|review_?type", re.I)
 
 APPLY_BTN_TEXTS = ["체험단 신청하기", "신청하기", "캠페인 신청", "지원하기"]
 SUBMIT_BTN_TEXTS = ["신청 완료", "신청완료하기", "신청하기", "제출하기", "확인"]
@@ -187,6 +195,56 @@ def pick_image(item):
     return "https://cdn.stylec.co.kr/" + v
 
 
+def item_channels(item):
+    """목록 데이터에서 SNS/채널 관련 필드 값만 모아 문자열로 (예: '인스타그램 Reels,네이버클립')."""
+    out = []
+    def add(v, depth=0):
+        if isinstance(v, str):
+            out.append(v)
+        elif isinstance(v, (int, float)) or v is None:
+            return
+        elif depth < 2 and isinstance(v, list):
+            for x in v:
+                add(x, depth + 1)
+        elif depth < 2 and isinstance(v, dict):
+            for x in v.values():
+                add(x, depth + 1)
+    for k, v in item.items():
+        if CHANNEL_KEY_RE.search(k):
+            add(v)
+    return " ".join(out)[:300]
+
+
+def only_excluded_channel(text, words):
+    """제외 채널(인스타그램 등)이 있고, 고를 수 있는 다른 채널은 없으면 True."""
+    t = (text or "").lower()
+    if not words or not any(w.lower() in t for w in words):
+        return False
+    return not any(o.lower() in t for o in OTHER_CHANNELS)
+
+
+def page_channel_text(page):
+    """상세 페이지 본문에서 '채널·SNS' 항목 근처 글자만 가져옴 (추천 목록 등 다른 체험단 글자는 제외)."""
+    try:
+        return page.evaluate(
+            r"""() => {
+                const c = document.body.cloneNode(true);
+                c.querySelectorAll('header, nav, footer, script, style, [class*=header], [class*=gnb], [class*=footer], [class*=menu]')
+                 .forEach(e => e.remove());
+                const lines = (c.innerText || c.textContent || '').split(/\n+/).map(l => l.trim()).filter(Boolean);
+                const out = [];
+                for (let i = 0; i < lines.length && out.length < 9; i++) {
+                    if (/채널|SNS|플랫폼|매체|리뷰\s*등록/i.test(lines[i]) && lines[i].length < 60) {
+                        out.push(lines[i], lines[i + 1] || '', lines[i + 2] || '');
+                    }
+                }
+                return out.join(' ');
+            }"""
+        ) or ""
+    except Exception:
+        return ""
+
+
 def pick(item, keys):
     for k in keys:
         if item.get(k) not in (None, ""):
@@ -286,7 +344,8 @@ def collect_campaigns(page, list_url, debug=False, max_pages=20):
         if url in seen:
             continue
         seen.add(url)
-        campaigns.append({"url": url, "title": str(title or "")[:120], "image": pick_image(it)})
+        campaigns.append({"url": url, "title": str(title or "")[:120], "image": pick_image(it),
+                          "channels": item_channels(it)})
 
     if debug:
         print("\n[debug] JSON 응답 URL:")
@@ -299,7 +358,7 @@ def collect_campaigns(page, list_url, debug=False, max_pages=20):
             sample = {k: (str(v)[:40]) for k, v in list(items[0].items())[:25]}
             print("[debug] 첫 항목 필드:", json.dumps(sample, ensure_ascii=False))
         for c in campaigns[:3]:
-            print("[debug] 예시:", c["url"], "|", c["title"][:40])
+            print("[debug] 예시:", c["url"], "|", c["title"][:40], "| 채널:", c.get("channels") or "-")
     return campaigns
 
 
@@ -340,7 +399,21 @@ def safe_click(el):
         el.click(force=True, timeout=8000)
 
 
-def fill_form(page, message):
+def _option_label(el):
+    """라디오·선택 항목 옆에 보이는 글자."""
+    try:
+        return el.evaluate(
+            """e => {
+                if (e.id) { const l = document.querySelector(`label[for="${CSS.escape(e.id)}"]`); if (l) return l.innerText; }
+                const l = e.closest('label'); if (l) return l.innerText;
+                return (e.value || '') + ' ' + (e.parentElement ? e.parentElement.innerText : '');
+            }"""
+        ) or ""
+    except Exception:
+        return ""
+
+
+def fill_form(page, message, avoid=()):
     """보이는 신청서 입력칸을 채웁니다. 채우지 못한 필수칸이 있으면 False."""
     # 동의 체크박스 전부 체크
     boxes = page.locator("input[type=checkbox]")
@@ -381,8 +454,10 @@ def fill_form(page, message):
             pass
     for rs in groups.values():
         if not any(r.is_checked() for r in rs):
+            # 인스타그램 같은 제외 채널이 아닌 첫 항목을 고름 (전부 제외 채널이면 첫 항목)
+            choice = next((r for r in rs if not any(w.lower() in _option_label(r).lower() for w in avoid)), rs[0])
             try:
-                rs[0].check(force=True)
+                choice.check(force=True)
             except Exception:
                 pass
 
@@ -393,9 +468,10 @@ def fill_form(page, message):
         try:
             if s.is_visible() and not s.input_value():
                 opts = s.locator("option").all()
-                vals = [o.get_attribute("value") for o in opts if o.get_attribute("value")]
+                vals = [(o.get_attribute("value"), (o.inner_text() or "").lower()) for o in opts if o.get_attribute("value")]
+                ok = [v for v, t in vals if not any(w.lower() in t or w.lower() in v.lower() for w in avoid)]
                 if vals:
-                    s.select_option(vals[0])
+                    s.select_option((ok or [vals[0][0]])[0])
         except Exception:
             pass
 
@@ -459,6 +535,11 @@ def backfill_images(page, hist, path, limit=80):
 
 
 def apply_one(page, camp, args):
+    # 목록 데이터의 채널 정보나 제목만 봐도 인스타그램 체험단이면 페이지를 열지 않고 건너뜀
+    if args.exclude_sns and (only_excluded_channel(camp.get("channels", ""), args.exclude_sns)
+                             or only_excluded_channel(camp.get("title", ""), args.exclude_sns)):
+        return "skip:인스타그램 체험단"
+
     page.goto(camp["url"], wait_until="domcontentloaded")
     try:
         page.wait_for_load_state("networkidle", timeout=10000)
@@ -491,6 +572,9 @@ def apply_one(page, camp, args):
             other = [t for t in ["배달형", "방문형", "기자단", "배송형"] if t in content]
             return f"skip:유형 다름{('(' + ','.join(other) + ')') if other else ''}"
 
+    if args.exclude_sns and only_excluded_channel(page_channel_text(page), args.exclude_sns):
+        return "skip:인스타그램 체험단"
+
     btn = find_visible_button(page, APPLY_BTN_TEXTS)
     if not btn:
         if any(t in body for t in DONE_TEXTS):
@@ -506,7 +590,7 @@ def apply_one(page, camp, args):
     if "auth/login" in page.url:
         return "fail:로그인 필요 (--login 먼저 실행)"
 
-    empty = fill_form(page, args.message)
+    empty = fill_form(page, args.message, args.exclude_sns)
     if empty:
         SHOT_DIR.mkdir(exist_ok=True)
         page.screenshot(path=str(SHOT_DIR / f"manual_{int(time.time())}.png"), full_page=True)
@@ -546,6 +630,8 @@ def main():
     ap.add_argument("--include", default="", help="포함 키워드(쉼표 구분) — 하나라도 있어야 신청")
     ap.add_argument("--exclude", default="", help="제외 키워드(쉼표 구분)")
     ap.add_argument("--message", default="", help="신청서의 빈 텍스트칸에 넣을 문구")
+    ap.add_argument("--exclude-sns", default=DEFAULT_EXCLUDE_SNS,
+                    help="이 채널로만 리뷰를 쓰는 체험단은 건너뜀 (쉼표 구분, 기본: 인스타그램·릴스). 빈 값이면 끔")
     ap.add_argument("--headless", action="store_true", help="브라우저 창 숨기기")
     ap.add_argument("--debug", action="store_true", help="링크/API 탐색 정보 출력")
     args = ap.parse_args()
@@ -553,6 +639,7 @@ def main():
     args.include = [k.strip() for k in args.include.split(",") if k.strip()]
     args.exclude = [k.strip() for k in args.exclude.split(",") if k.strip()]
     args.types = [k.strip() for k in args.types.split(",") if k.strip()]
+    args.exclude_sns = [k.strip() for k in args.exclude_sns.split(",") if k.strip()]
 
     hist = load_history(args.history)
     run = {"started_at": now_kst(), "finished_at": "", "status": "running",

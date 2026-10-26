@@ -79,6 +79,7 @@ python musinsa_preuser.py --export-session
 - **로그인 만료**: 대시보드 맨 위에 어느 사이트인지 빨간 안내가 뜨고 GitHub에서 실패 메일이 옵니다.
   해당 사이트의 `--export-session` 을 다시 실행하고 시크릿을 새 값으로 **Update** 하세요.
 - **스타일씨 신청 문구·제외 키워드**: `.github/workflows/stylec.yml` 의 `APPLY_MESSAGE`, `EXCLUDE`.
+- **스타일씨 인스타그램 체험단**: 기본으로 신청하지 않습니다 (인스타그램·릴스 전용인 것만 제외, 블로그와 둘 중 고르는 건 블로그로 신청). 다시 신청하려면 `stylec.yml` 의 신청 명령에 `--exclude-sns ""` 를 붙이세요.
 - **무신사 사이즈·색상·제외 키워드**: `musinsa_preuser.py` 위쪽 설정 (`SHOE_SIZE`, `RING_SIZE`, `PREFERRED_OPTIONS`, `EXCLUDE_KEYWORDS` 등).
 - **실행 시각**: `stylec.yml` 의 `cron`(UTC 기준, 한국시간 −9시간)과 `docs/index.html` 의 `RUN_HOUR_KST` 를 함께 바꾸세요.
 - **직접 신청이 필요한 건**: Actions 실행 결과 하단 **Artifacts** 에 화면이 저장됩니다
