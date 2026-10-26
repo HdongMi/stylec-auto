@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26 15:39:43",
+ "updated_at": "2026-10-26 15:47:13",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -111,6 +111,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-10-26 15:43:16",
+   "finished_at": "2026-10-26 15:47:13",
+   "status": "success",
+   "listed": 129,
+   "ok": 9,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 5
   }
  ],
  "records": [
@@ -4432,6 +4443,87 @@
    "title": "BOSOD  3-Step",
    "url": "https://www.stylec.co.kr/trials/156457",
    "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1774162484575.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:43:48",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[제품 제공]  속옷 양말 아기옷 사용가능한 미니 빨래판",
+   "url": "https://www.stylec.co.kr/trials/156874",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1790519450894.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:44:08",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[코페르] 큐리페어 멜라 크림_올리브영",
+   "url": "https://www.stylec.co.kr/trials/150869",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791361283656.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:44:28",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "커피의 경험은 남기고 카페인은 ZERO!",
+   "url": "https://www.stylec.co.kr/trials/156808",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1785465284394.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:44:50",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "문닫힘 방지 손끼임 방지 도어쿠션",
+   "url": "https://www.stylec.co.kr/trials/156695",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784725541356.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:45:10",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[제품 제공] 속옷, 양말 아기옷 미니 빨래판",
+   "url": "https://www.stylec.co.kr/trials/156875",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1790519987234.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:45:31",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[메이드인랩] 슈퍼EPA 90 오메가3 (신제품, 반려동물용 오메가3) - 블로그",
+   "url": "https://www.stylec.co.kr/trials/152747",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1791938817550.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:46:07",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "반려동물 아기 문끼임방지 도어쿠션",
+   "url": "https://www.stylec.co.kr/trials/156696",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1784724623626.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:46:27",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "리비트 페스츄리 오징어 쿠팡파트너스 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/156769",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792894582397.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-10-26 15:47:05",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "베이비드래곤 MEW 고급 아세테이트 뿔테안경",
+   "url": "https://www.stylec.co.kr/trials/156364",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792735049298.png",
    "img_checked": true
   }
  ]
