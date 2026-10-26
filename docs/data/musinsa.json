@@ -87,6 +87,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 58
+  },
+  {
+   "started_at": "2026-10-26 15:43:14",
+   "finished_at": "2026-10-26 15:51:10",
+   "status": "success",
+   "listed": 272,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 58
   }
  ],
  "records": [
@@ -2231,5 +2242,5 @@
    "note": "모모 나이트 긴팔 파자마 세트 / XL"
   }
  ],
- "updated_at": "2026-10-26 15:28:50"
+ "updated_at": "2026-10-26 15:51:10"
 }
