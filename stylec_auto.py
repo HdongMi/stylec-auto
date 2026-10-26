@@ -10,7 +10,7 @@
   python stylec_auto.py                               # 미리보기 (어떤 체험단을 신청할지 확인만)
   python stylec_auto.py --apply --max 10              # 실제로 최대 10개 신청
   python stylec_auto.py --apply --include 화장품,헤어 --exclude 방문형
-  python stylec_auto.py --apply --exclude-sns ""      # 인스타그램 체험단도 신청 (기본은 제외)
+  python stylec_auto.py --apply --sns ""              # 블로그 외 채널(인스타·유튜브 등)도 신청 (기본은 블로그만)
   python stylec_auto.py --export-session              # GitHub Actions 용 로그인 상태 내보내기
   python stylec_auto.py --apply --history docs/data/history.json   # 대시보드 기록 남기기
 """
@@ -53,11 +53,17 @@ DETAIL_PATTERNS = [
     re.compile(r"[?&]wr_id=\d+"),
 ]
 
-# 이 채널로만 리뷰를 쓰는 체험단은 신청하지 않음 (--exclude-sns 로 바꿀 수 있음, 빈 값이면 끔)
-DEFAULT_EXCLUDE_SNS = "인스타그램,인스타,instagram,릴스,reels"
-# 위 채널과 함께 이 채널도 고를 수 있으면 신청함 (신청서에서는 이 채널을 고름)
-OTHER_CHANNELS = ["블로그", "blog", "네이버", "유튜브", "youtube", "틱톡", "tiktok", "클립", "쇼츠", "shorts",
-                  "구매평", "카페", "스토어", "리뷰"]
+# 리뷰 채널: 여기 있는 채널로 쓸 수 있는 체험단만 신청 (기본: 블로그만). --sns 로 바꿀 수 있고, 빈 값이면 채널 상관없이 신청
+DEFAULT_SNS = "블로그,blog"
+# 블로그가 아닌 플랫폼 (이것만 있고 블로그가 없으면 건너뜀)
+OTHER_PLATFORMS = {
+    "인스타그램": ["인스타", "instagram", "릴스", "reels", "ins reels"],
+    "유튜브": ["유튜브", "youtube", "쇼츠", "shorts", "유튜버"],
+    "틱톡": ["틱톡", "tiktok"],
+    "네이버 클립": ["클립"],
+    "스레드": ["스레드", "threads"],
+    "페이스북": ["페이스북", "facebook"],
+}
 CHANNEL_KEY_RE = re.compile(r"sns|channel|media|platform|reels|insta|review_?type", re.I)
 
 APPLY_BTN_TEXTS = ["체험단 신청하기", "신청하기", "캠페인 신청", "지원하기"]
@@ -215,12 +221,30 @@ def item_channels(item):
     return " ".join(out)[:300]
 
 
-def only_excluded_channel(text, words):
-    """제외 채널(인스타그램 등)이 있고, 고를 수 있는 다른 채널은 없으면 True."""
+def channel_verdict(text, allow):
+    """('blog', []) 블로그로 쓸 수 있음 / ('other', ['유튜브']) 다른 플랫폼만 / (None, []) 알 수 없음."""
     t = (text or "").lower()
-    if not words or not any(w.lower() in t for w in words):
-        return False
-    return not any(o.lower() in t for o in OTHER_CHANNELS)
+    if any(w.lower() in t for w in allow):
+        return "blog", []
+    found = [name for name, words in OTHER_PLATFORMS.items() if any(w.lower() in t for w in words)]
+    return ("other", found) if found else (None, [])
+
+
+def main_text(page, limit=2500):
+    """상단 메뉴·하단 정보를 뺀 본문 앞부분 (추천 목록 등이 섞이지 않도록 앞부분만)."""
+    try:
+        return (page.evaluate(
+            r"""() => {
+                const hide = [...document.querySelectorAll('header, nav, footer, [class*=header], [class*=gnb], [class*=footer], [class*=menu]')];
+                const saved = hide.map(e => e.style.display);
+                hide.forEach(e => e.style.display = 'none');
+                const text = document.body.innerText || '';          // 화면에 보이는 글자만 (숨겨진 신청서 등 제외)
+                hide.forEach((e, i) => e.style.display = saved[i]);
+                return text.replace(/\s+/g, ' ');
+            }"""
+        ) or "")[:limit]
+    except Exception:
+        return ""
 
 
 def page_channel_text(page):
@@ -228,10 +252,12 @@ def page_channel_text(page):
     try:
         return page.evaluate(
             r"""() => {
-                const c = document.body.cloneNode(true);
-                c.querySelectorAll('header, nav, footer, script, style, [class*=header], [class*=gnb], [class*=footer], [class*=menu]')
-                 .forEach(e => e.remove());
-                const lines = (c.innerText || c.textContent || '').split(/\n+/).map(l => l.trim()).filter(Boolean);
+                const hide = [...document.querySelectorAll('header, nav, footer, [class*=header], [class*=gnb], [class*=footer], [class*=menu]')];
+                const saved = hide.map(e => e.style.display);
+                hide.forEach(e => e.style.display = 'none');
+                const text = document.body.innerText || '';          // 화면에 보이는 글자만 (숨겨진 신청서 등 제외)
+                hide.forEach((e, i) => e.style.display = saved[i]);
+                const lines = text.split(/\n+/).map(l => l.trim()).filter(Boolean);
                 const out = [];
                 for (let i = 0; i < lines.length && out.length < 9; i++) {
                     if (/채널|SNS|플랫폼|매체|리뷰\s*등록/i.test(lines[i]) && lines[i].length < 60) {
@@ -413,7 +439,20 @@ def _option_label(el):
         return ""
 
 
-def fill_form(page, message, avoid=()):
+def _prefer(labels, allow):
+    """고를 항목 번호: 블로그 등 허용 채널 → 다른 플랫폼이 아닌 것 → 첫 번째."""
+    low = [l.lower() for l in labels]
+    for i, l in enumerate(low):
+        if any(w.lower() in l for w in allow):
+            return i
+    others = [w.lower() for ws in OTHER_PLATFORMS.values() for w in ws]
+    for i, l in enumerate(low):
+        if not any(w in l for w in others):
+            return i
+    return 0
+
+
+def fill_form(page, message, allow=()):
     """보이는 신청서 입력칸을 채웁니다. 채우지 못한 필수칸이 있으면 False."""
     # 동의 체크박스 전부 체크
     boxes = page.locator("input[type=checkbox]")
@@ -454,8 +493,8 @@ def fill_form(page, message, avoid=()):
             pass
     for rs in groups.values():
         if not any(r.is_checked() for r in rs):
-            # 인스타그램 같은 제외 채널이 아닌 첫 항목을 고름 (전부 제외 채널이면 첫 항목)
-            choice = next((r for r in rs if not any(w.lower() in _option_label(r).lower() for w in avoid)), rs[0])
+            # 채널 선택이면 블로그를 고름 (블로그가 없으면 다른 플랫폼이 아닌 첫 항목)
+            choice = rs[_prefer([_option_label(r) for r in rs], allow)]
             try:
                 choice.check(force=True)
             except Exception:
@@ -468,10 +507,10 @@ def fill_form(page, message, avoid=()):
         try:
             if s.is_visible() and not s.input_value():
                 opts = s.locator("option").all()
-                vals = [(o.get_attribute("value"), (o.inner_text() or "").lower()) for o in opts if o.get_attribute("value")]
-                ok = [v for v, t in vals if not any(w.lower() in t or w.lower() in v.lower() for w in avoid)]
+                vals = [(o.get_attribute("value"), (o.inner_text() or "") + " " + o.get_attribute("value"))
+                        for o in opts if o.get_attribute("value")]
                 if vals:
-                    s.select_option((ok or [vals[0][0]])[0])
+                    s.select_option(vals[_prefer([t for _, t in vals], allow)][0])
         except Exception:
             pass
 
@@ -535,10 +574,14 @@ def backfill_images(page, hist, path, limit=80):
 
 
 def apply_one(page, camp, args):
-    # 목록 데이터의 채널 정보나 제목만 봐도 인스타그램 체험단이면 페이지를 열지 않고 건너뜀
-    if args.exclude_sns and (only_excluded_channel(camp.get("channels", ""), args.exclude_sns)
-                             or only_excluded_channel(camp.get("title", ""), args.exclude_sns)):
-        return "skip:인스타그램 체험단"
+    # 리뷰 채널 확인 ① 목록 데이터의 채널 정보와 제목 — 블로그가 아니면 페이지를 열지 않고 건너뜀
+    blog_ok = not args.sns
+    if args.sns:
+        v_list, f_list = channel_verdict(camp.get("channels", ""), args.sns)
+        v_title, f_title = channel_verdict(camp.get("title", ""), args.sns)
+        if v_title == "other" or (v_list == "other" and v_title != "blog"):
+            return f"skip:블로그 아님({','.join(f_title or f_list)})"
+        blog_ok = "blog" in (v_list, v_title)
 
     page.goto(camp["url"], wait_until="domcontentloaded")
     try:
@@ -572,8 +615,17 @@ def apply_one(page, camp, args):
             other = [t for t in ["배달형", "방문형", "기자단", "배송형"] if t in content]
             return f"skip:유형 다름{('(' + ','.join(other) + ')') if other else ''}"
 
-    if args.exclude_sns and only_excluded_channel(page_channel_text(page), args.exclude_sns):
-        return "skip:인스타그램 체험단"
+    # 리뷰 채널 확인 ② 상세 페이지의 '채널·SNS' 항목, 없으면 본문 앞부분
+    if not blog_ok:
+        for text in (page_channel_text(page), main_text(page)):
+            v, found = channel_verdict(text, args.sns)
+            if v == "other":
+                return f"skip:블로그 아님({','.join(found)})"
+            if v == "blog":
+                blog_ok = True
+                break
+        if not blog_ok:
+            return "skip:블로그 체험단인지 확인 못함"
 
     btn = find_visible_button(page, APPLY_BTN_TEXTS)
     if not btn:
@@ -590,7 +642,7 @@ def apply_one(page, camp, args):
     if "auth/login" in page.url:
         return "fail:로그인 필요 (--login 먼저 실행)"
 
-    empty = fill_form(page, args.message, args.exclude_sns)
+    empty = fill_form(page, args.message, args.sns)
     if empty:
         SHOT_DIR.mkdir(exist_ok=True)
         page.screenshot(path=str(SHOT_DIR / f"manual_{int(time.time())}.png"), full_page=True)
@@ -630,8 +682,8 @@ def main():
     ap.add_argument("--include", default="", help="포함 키워드(쉼표 구분) — 하나라도 있어야 신청")
     ap.add_argument("--exclude", default="", help="제외 키워드(쉼표 구분)")
     ap.add_argument("--message", default="", help="신청서의 빈 텍스트칸에 넣을 문구")
-    ap.add_argument("--exclude-sns", default=DEFAULT_EXCLUDE_SNS,
-                    help="이 채널로만 리뷰를 쓰는 체험단은 건너뜀 (쉼표 구분, 기본: 인스타그램·릴스). 빈 값이면 끔")
+    ap.add_argument("--sns", default=DEFAULT_SNS,
+                    help="이 채널로 리뷰를 쓸 수 있는 체험단만 신청 (쉼표 구분, 기본: 블로그). 빈 값이면 채널 상관없이 신청")
     ap.add_argument("--headless", action="store_true", help="브라우저 창 숨기기")
     ap.add_argument("--debug", action="store_true", help="링크/API 탐색 정보 출력")
     args = ap.parse_args()
@@ -639,7 +691,7 @@ def main():
     args.include = [k.strip() for k in args.include.split(",") if k.strip()]
     args.exclude = [k.strip() for k in args.exclude.split(",") if k.strip()]
     args.types = [k.strip() for k in args.types.split(",") if k.strip()]
-    args.exclude_sns = [k.strip() for k in args.exclude_sns.split(",") if k.strip()]
+    args.sns = [k.strip() for k in args.sns.split(",") if k.strip()]
 
     hist = load_history(args.history)
     run = {"started_at": now_kst(), "finished_at": "", "status": "running",
