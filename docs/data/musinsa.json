@@ -109,6 +109,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-10-28 15:29:29",
+   "finished_at": "2026-10-28 15:37:57",
+   "status": "success",
+   "listed": 281,
+   "ok": 28,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 0
   }
  ],
  "records": [
@@ -2871,7 +2882,287 @@
    "image": "https://image.musinsa.com/images/prd_img/2023020716022900000056959.jpg",
    "img_checked": true,
    "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:29:59",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "토앤토 패딩슈즈 Pillo 모카브라운 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49105",
+   "image": "https://inoo11.openhost.cafe24.com/web/open_product/open_detail/gu_tawntoe/26/comm_3.jpg",
+   "img_checked": true,
+   "note": "280"
+  },
+  {
+   "at": "2026-10-28 15:30:18",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥코인 틴 폴딩 선글라스 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48942",
+   "image": "https://mccoin.cafe24.com/web/lookbook/intro.jpg",
+   "img_checked": true,
+   "note": "TIN 01 black 틴 폴딩 선글라스(블랙) / FREE"
+  },
+  {
+   "at": "2026-10-28 15:30:36",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마리끌레르 배색체크 브러쉬 니트 머플러 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48917",
+   "image": "https://firstmarie.diskn.com/page/MAGDSC03MBK_2.jpg",
+   "img_checked": true,
+   "note": "BK(블랙) / FF(FREE)"
+  },
+  {
+   "at": "2026-10-28 15:30:52",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "플로즈룸 베른 하프 집 3컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48864",
+   "image": "https://image.msscdn.net/images/2026/09/15/883b816113ba49e68dfb020b249183da.jpg",
+   "img_checked": true,
+   "note": "Verne Half Zip NAVY / L"
+  },
+  {
+   "at": "2026-10-28 15:31:09",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 꾸뛰르 스웨이드 안감 퍼 하이넥 무스탕 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48842",
+   "image": "https://tbhimg.com/images/MB/M1JP817000_S02.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-28 15:31:25",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 두굿 캐시미어 오버핏 하프 코트 2컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48840",
+   "image": "https://tbhimg.com/images/MB/M1CA710200_S02.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-28 15:31:42",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 온라인 전용 캐시미어 오버핏 발마칸 롱 코트 3컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48838",
+   "image": "https://tbhimg.com/images/MB/M1CA71A100_S02.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-28 15:31:58",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 온라인 전용 두굿 꾸뛰르 울 혼방 하프 발마칸 코트 4컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48837",
+   "image": "https://tbhimg.com/images/MB/M1CA71A400_S03.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-28 15:32:21",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "유니버스 가먼트 허그 컬리지 워싱 볼캡 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48822",
+   "image": "https://jewooshop.diskn.com/UNIVERSEGARMENT/26FW/BUACAAF0580NA.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:32:38",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "노트르메소드 팀 앤엠 뎁트 캡 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48821",
+   "image": "https://ecimg.cafe24img.com/pg1289b96882582091/qscd1316/PDP/26FW/NM26108BB.jpg",
+   "img_checked": true,
+   "note": "Team NM Dept Cap_White Navy / FREE"
+  },
+  {
+   "at": "2026-10-28 15:33:04",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "유니버스 가먼트 아메리칸 플래그 워싱 볼캡 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48820",
+   "image": "https://jewooshop.diskn.com/UNIVERSEGARMENT/26FW/BUACAAF0570BR.jpg",
+   "img_checked": true,
+   "note": "아메리칸 플래그 워싱 볼캡_BLACK / FREE"
+  },
+  {
+   "at": "2026-10-28 15:33:22",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "유니버스 가먼트 데이지 5패널 워싱 캡 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48818",
+   "image": "https://jewooshop.diskn.com/UNIVERSEGARMENT/26FW/BUACAAF0560OL.jpg",
+   "img_checked": true,
+   "note": "데이지 5패널 워싱 캡_OLIVE / FREE"
+  },
+  {
+   "at": "2026-10-28 15:33:39",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "노트르메소드 앤엠 96 페이디드 캡 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48817",
+   "image": "https://ecimg.cafe24img.com/pg1289b96882582091/qscd1316/PDP/26FW/NM26109KK.jpg",
+   "img_checked": true,
+   "note": "NM96 Faded Cap_Black / FREE"
+  },
+  {
+   "at": "2026-10-28 15:33:55",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "유니버스 가먼트 글로브 헤리티지 워싱 캡 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48816",
+   "image": "https://jewooshop.diskn.com/UNIVERSEGARMENT/26FW/BUACAAF0540BR.jpg",
+   "img_checked": true,
+   "note": "글로브 헤리티지 워싱 캡_NAVY / FREE"
+  },
+  {
+   "at": "2026-10-28 15:34:10",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "빌라쥬11팩토리 제주 티 카밍 크림 체험단 20명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48785",
+   "image": "https://image.msscdn.net/images/prd_img/20260827165852109564486696a8fee3c1ac04.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:34:26",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "랜 아카이브 슬림 워머 롱슬리브 아이보리 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48753",
+   "image": "https://image.msscdn.net/images/2026/10/19/c331139b4024495c935b54a4ac4fbf3d.jpg",
+   "img_checked": true,
+   "note": "아이보리 / 2"
+  },
+  {
+   "at": "2026-10-28 15:34:41",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "믹순 피디알엔 콜라겐 세럼 체험단 15명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48683",
+   "image": "https://image.msscdn.net/images/2026/10/13/83195dac2f1e4af4b6905dcfc208016f.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:34:59",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "리오므 더스티 그레인 팔찌 롱드롭바 팔찌 네이비 택1 5명 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48663",
+   "image": "https://image.msscdn.net/images/2026/10/14/e0cbdbebfcbd4027a40f30dfc7631ca8.jpg",
+   "img_checked": true,
+   "note": "롱드롭바 팔찌 4mm_Navy / XXL-19cm / 선물 패키지 추가"
+  },
+  {
+   "at": "2026-10-28 15:35:23",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "비치스앤크림 아일랜드 브리즈 카치온 볼캡 네이비 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48607",
+   "image": "https://bncproduct.openhost.cafe24.com/web/product/cap/cap-71-04-01.jpg",
+   "img_checked": true,
+   "note": "navy"
+  },
+  {
+   "at": "2026-10-28 15:35:37",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "비오엠 히알루론산 수분 필링 젤 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48580",
+   "image": "https://gi.esmplus.com/bstarlit/BOM/Product_Detail_Page/HYALURONIC_ACID_MOISTURE_PEELING_GEL/KO/BOM_HYALURONIC_ACID_MOISTURE_PEELING_GEL_KO_01_01.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:35:53",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "비오엠 히알루론산 수분 클렌징 폼 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48579",
+   "image": "https://gi.esmplus.com/bstarlit/BOM/Product_Detail_Page/HYALURONIC_ACID_MOISTURE_CLEANSING_FOAM/KO/HYALURONIC_ACID_MOISTURE_CLEANSING_FOAM_01_01.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:36:17",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "비오엠 히알루론산 수분 토너 패드 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48578",
+   "image": "https://image.msscdn.net/images/2026/09/29/e811ef62d9244019a6679a3cec68ca34.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:36:32",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "비오엠 히알루론산 수분 크림 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48577",
+   "image": "https://ai.esmplus.com/bstarlit/%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80/%ED%9E%88%EC%95%8C%EB%A3%A8%EB%A1%A0%EC%82%B0%EC%88%98%EB%B6%84%ED%81%AC%EB%A6%BC/HYALURONIC_ACID_MOISTURE_Cream_01_09.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-28 15:36:49",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "베른 시그니처 크로코 엠보스드 카우하이드 벨트 블랙 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48562",
+   "image": "https://diveinarchive.cafe24.com/PAGE/VERN/V26S-BT02BK/LOOK.jpg",
+   "img_checked": true,
+   "note": "OS"
+  },
+  {
+   "at": "2026-10-28 15:37:06",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 워시드 스탠다드 코튼 셔츠 라이트옐로우 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48511",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-SH12LY/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-28 15:37:22",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 데미지 옥스포드 더블니 팬츠 차콜 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48509",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-PT03CH/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-28 15:37:39",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 데미지 옥스포드 더블니 팬츠 블루 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48508",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-PT03BL/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-28 15:37:55",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 데미지 옥스포드 더블니 팬츠 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48507",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-PT03BK/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
   }
  ],
- "updated_at": "2026-10-27 15:08:49"
+ "updated_at": "2026-10-28 15:37:57"
 }
