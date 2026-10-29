@@ -120,6 +120,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-10-29 15:40:22",
+   "finished_at": "2026-10-29 15:44:22",
+   "status": "success",
+   "listed": 284,
+   "ok": 13,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 0
   }
  ],
  "records": [
@@ -3162,7 +3173,137 @@
    "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-PT03BK/LOOK.jpg",
    "img_checked": true,
    "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-29 15:40:51",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "무신사 스탠다드 데일리 푸퍼 숏 패딩 재킷 [라이트 그레이] 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49323",
+   "image": "https://image.msscdn.net/images/prd_img/20260529141515123539998546a1920e31e29c.jpg",
+   "img_checked": true,
+   "note": "2XL"
+  },
+  {
+   "at": "2026-10-29 15:41:08",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마리끌레르 컬러 그라데이션 머플러 그레이 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48922",
+   "image": "https://firstmarie.diskn.com/page/MAGDSC05MGY_2.jpg",
+   "img_checked": true,
+   "note": "GY(그레이) / FF(FREE)"
+  },
+  {
+   "at": "2026-10-29 15:41:25",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마리끌레르 컬러 그라데이션 머플러 베이지 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48920",
+   "image": "https://firstmarie.diskn.com/page/MAGDSC05MBE_2.jpg",
+   "img_checked": true,
+   "note": "BE(베이지) / FF(FREE)"
+  },
+  {
+   "at": "2026-10-29 15:41:46",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 온라인 전용 울 혼방 브이넥 세미 오버핏 데일리 니트 3컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48849",
+   "image": "https://tbhimg.com/images/MB/M1KT71A200_S03.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-29 15:42:04",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 에어울 울 혼방 플레인 조직 라운드 세미 오버핏 니트 5컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48848",
+   "image": "https://tbhimg.com/images/MB/M1KT710100_S02.jpg",
+   "img_checked": true,
+   "note": "BD / 110"
+  },
+  {
+   "at": "2026-10-29 15:42:22",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 온라인 전용 울 혼방 라운드 세미 오버핏 라운드 데일리 가디건 4컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48845",
+   "image": "https://tbhimg.com/images/MB/M1CD71A200_S02.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-29 15:42:39",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "마인드브릿지 두굿 울 혼방 세미 오버핏 하이넥 집업 가디건 2컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48843",
+   "image": "https://tbhimg.com/images/MB/M1CD71A100_S02.jpg",
+   "img_checked": true,
+   "note": "BK / 110"
+  },
+  {
+   "at": "2026-10-29 15:42:58",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "프리노어 멀티 로고 스트링 오버핏 투웨이 후드 집업 네이비 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48777",
+   "image": "https://prinoar.cafe24.com/web/26fw/detail/p629918247_nv_05.jpg",
+   "img_checked": true,
+   "note": "기모(겨울) / XL"
+  },
+  {
+   "at": "2026-10-29 15:43:14",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "하이뮨 울트라 49그램 블랙초코 6입 체험단 50명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48749",
+   "image": "https://foodismall.com/web/upload/NNEditor/20260522/ED9598EC9DB4EBAEA8_EC9AB8ED8AB8EB9DBC49g_3mb.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-10-29 15:43:32",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 라운드 넥 니트 가디건 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48515",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-KN01BK/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-29 15:43:47",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 라운드 넥 니트 가디건 레드 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48514",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-KN01RD/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-29 15:44:02",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 워시드 베른 트랙 자켓 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48513",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-JK19BK/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
+  },
+  {
+   "at": "2026-10-29 15:44:19",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "다이브인 워시드 베른 트랙 자켓 네이비 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48512",
+   "image": "https://diveinarchive.cafe24.com/PAGE/DIVEIN/D26F-JK19NV/LOOK.jpg",
+   "img_checked": true,
+   "note": "2SIZE"
   }
  ],
- "updated_at": "2026-10-28 15:37:57"
+ "updated_at": "2026-10-29 15:44:22"
 }
