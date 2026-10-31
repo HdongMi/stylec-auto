@@ -142,6 +142,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-10-31 15:31:00",
+   "finished_at": "2026-10-31 15:31:19",
+   "status": "success",
+   "listed": 294,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 0
   }
  ],
  "records": [
@@ -3786,5 +3797,5 @@
    "note": "21호"
   }
  ],
- "updated_at": "2026-10-30 15:54:39"
+ "updated_at": "2026-10-31 15:31:19"
 }
