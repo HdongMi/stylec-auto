@@ -153,6 +153,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-11-01 16:02:11",
+   "finished_at": "2026-11-01 16:02:46",
+   "status": "success",
+   "listed": 295,
+   "ok": 1,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 0
   }
  ],
  "records": [
@@ -3795,7 +3806,17 @@
    "image": "https://yunyuncompany.speedgabia.com/page/steel/R/Matte_line_bold_R/02.jpg",
    "img_checked": true,
    "note": "21호"
+  },
+  {
+   "at": "2026-11-01 16:02:43",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "무신사 스탠다드 속기모 커브드 데님 팬츠 블랙 체험단 20명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48596",
+   "image": "https://image.msscdn.net/images/prd_img/20261020182647949550194806ad733d7e7d37.jpg",
+   "img_checked": true,
+   "note": "38"
   }
  ],
- "updated_at": "2026-10-31 15:31:19"
+ "updated_at": "2026-11-01 16:02:46"
 }
