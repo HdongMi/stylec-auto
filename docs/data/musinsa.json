@@ -186,6 +186,17 @@
    "manual": 0,
    "fail": 1,
    "skip": 0
+  },
+  {
+   "started_at": "2026-11-04 16:07:57",
+   "finished_at": "2026-11-04 16:11:21",
+   "status": "success",
+   "listed": 274,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 21
   }
  ],
  "records": [
@@ -5770,5 +5781,5 @@
    "note": "FREE"
   }
  ],
- "updated_at": "2026-11-03 16:45:46"
+ "updated_at": "2026-11-04 16:11:21"
 }
