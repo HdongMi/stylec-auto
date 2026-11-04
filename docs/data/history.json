@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-03 16:26:07",
+ "updated_at": "2026-11-04 16:49:39",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -210,6 +210,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-11-04 16:07:49",
+   "finished_at": "2026-11-04 16:49:39",
+   "status": "success",
+   "listed": 257,
+   "ok": 18,
+   "check": 4,
+   "manual": 0,
+   "fail": 0,
+   "skip": 214
   }
  ],
  "records": [
@@ -5115,6 +5126,204 @@
    "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
    "title": "일본어 왕초보도 할 수 있는 1:1 화상 회화 체험하자!",
    "url": "https://www.stylec.co.kr/trials/157294",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792630463433.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:08:57",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "투박한 보냉백보다 일상에 자연스레 스며드는 도시락 가방!",
+   "url": "https://www.stylec.co.kr/trials/158323",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793195205377.jpeg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:14:16",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[블로그] 수피오다 보늬밤 뽀득폼",
+   "url": "https://www.stylec.co.kr/trials/158167",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793172916626.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:14:47",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[봉봉프렌즈] 크리스마스선물 어린이 화장품세트_홀리데이메이크업박스세트",
+   "url": "https://www.stylec.co.kr/trials/159477",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792569058919.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:15:07",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[9만원상당] 레디 보이 슈퍼 리치 핸드 앤 네일 밤",
+   "url": "https://www.stylec.co.kr/trials/159614",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1767748455076.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:15:33",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "닥터X:하얀 마피아의 시대에 나온 요구르트 런을 홍보해주세요!",
+   "url": "https://www.stylec.co.kr/trials/160288",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793718290431.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:17:12",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[국개대표] 증기로 찐 강아지밥 올바른끼니 오리+고구마 / 장건강",
+   "url": "https://www.stylec.co.kr/trials/158468",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1761725456884.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:18:17",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[펫라벨] 강아지 간식이 무려 90개?! 산양유 단백질 스틱 네이버 블로그 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/158784",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793323166106.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:18:39",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[봉봉프렌즈] 크리스마스선물 어린이 화장품세트_봉봉 메이크업박스세트",
+   "url": "https://www.stylec.co.kr/trials/159481",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792569399076.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:20:29",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[정직한실험실] 엑스퍼트 피니쉬 모로코 아르간오일 60ml_헤어",
+   "url": "https://www.stylec.co.kr/trials/159631",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788159590141.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:20:50",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[정직한실험실] 엑스퍼트 피니쉬 모로코 아르간오일 60 ml",
+   "url": "https://www.stylec.co.kr/trials/159635",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1788159590141.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:22:39",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[리무브] 올리브영 니플패치 1위 '스킨브라 에어 블로그 체험단 모집",
+   "url": "https://www.stylec.co.kr/trials/159018",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793345312337.png",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:24:53",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그체험단]  강아지동결건조수제간식 오플 젠틀크런치 오리 100g",
+   "url": "https://www.stylec.co.kr/trials/159582",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793599686570.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:25:26",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[블로그체험단]  강아지동결건조수제간식 오플 젠틀크런치 북어 100g",
+   "url": "https://www.stylec.co.kr/trials/159579",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793599394835.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:26:34",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "[블로그체험단]  강아지동결건조수제간식 오플 젠틀크런치 닭고기 100g",
+   "url": "https://www.stylec.co.kr/trials/159576",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793598021112.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:27:29",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "[요엔] 방광염·요실금 영양제",
+   "url": "https://www.stylec.co.kr/trials/158204",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1793173819282.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:41:16",
+   "status": "check",
+   "result": "ok?:제출함 (결과 문구 미확인 — MY체험단에서 확인)",
+   "title": "JLPT N5 한 권으로 스피드 합격!",
+   "url": "https://www.stylec.co.kr/trials/159768",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792630049064.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:43:20",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "JLPT N4 한 권으로 스피드 합격!",
+   "url": "https://www.stylec.co.kr/trials/159767",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792629952582.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:44:06",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "JLPT N1 한 권으로 스피드 합격!",
+   "url": "https://www.stylec.co.kr/trials/159764",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792629454222.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:44:47",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "JLPT N2 한 권으로 스피드 합격!",
+   "url": "https://www.stylec.co.kr/trials/159765",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792629732523.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:45:18",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "JLPT N3 [맛있는스쿨] 도서+인강",
+   "url": "https://www.stylec.co.kr/trials/159438",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1778813400724.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:45:40",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "JLPT N3 한 권으로 스피드 합격!",
+   "url": "https://www.stylec.co.kr/trials/159766",
+   "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792629858206.jpg",
+   "img_checked": true
+  },
+  {
+   "at": "2026-11-04 16:47:08",
+   "status": "ok",
+   "result": "ok:신청 완료",
+   "title": "일본어 왕초보도 할 수 있는 1:1 화상 회화 체험하자!",
+   "url": "https://www.stylec.co.kr/trials/159769",
    "image": "https://stylec-s3.s3.ap-northeast-2.amazonaws.com/data/editors/1792630463433.jpg",
    "img_checked": true
   }
