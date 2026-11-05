@@ -197,6 +197,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 21
+  },
+  {
+   "started_at": "2026-11-05 16:36:52",
+   "finished_at": "2026-11-05 16:42:26",
+   "status": "success",
+   "listed": 270,
+   "ok": 8,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 21
   }
  ],
  "records": [
@@ -5779,7 +5790,87 @@
    "image": "https://image.msscdn.net/images/prd_img/202408071659269375444155566b3295ee4e4f.jpg",
    "img_checked": true,
    "note": "FREE"
+  },
+  {
+   "at": "2026-11-05 16:37:21",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "블루썬플라워 크록 유틸리티 레더 벨트 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49482",
+   "image": "https://image.msscdn.net/images/2026/09/10/5c825e96e4424361a3eb0097254bb390.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-05 16:37:39",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "슈퍼서브 핑거홀 하이넥 크롭 경량 플리스 하프 집업 4컬러 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49457",
+   "image": "https://image.msscdn.net/images/2026/10/28/7feb7c5dc44b44f28be5e8884c251b60.jpg",
+   "img_checked": true,
+   "note": "블랙 / L"
+  },
+  {
+   "at": "2026-11-05 16:37:55",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 카루도 3160 기모 오트밀 후드티 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49188",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Top/3160OM1.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-05 16:38:11",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 카루도 3160 기모 다크멜란지그레이 후드티 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49187",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Top/3160GR1.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-05 16:38:27",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 아카릿 3327 오트밀 스웨트셔츠 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49186",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Top/3327OM1.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-05 16:38:43",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "플라비즘 맨 다이드 부츠컷 데님  다크 그레이 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49175",
+   "image": "https://image.msscdn.net/images/2026/11/03/4bbf3fc8ed514a4ead649f61d67f893e.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-05 16:38:58",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "프리크 아틀리에 오 드 퍼퓸 트로피컬 프리지아 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49135",
+   "image": "https://image.msscdn.net/images/2026/09/28/c9d29855d97b4a27a3b0260b1f45a03d.png",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-05 16:39:14",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "바이젝 홀가먼트 프로머슬핏 롱슬리브 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49030",
+   "image": "https://image.msscdn.net/thumbnails/community/preuser/images/73783fd2-d108-11f1-885c-3df932867ce2.jpg",
+   "img_checked": true,
+   "note": "다크 네이비 / XXL"
   }
  ],
- "updated_at": "2026-11-04 16:11:21"
+ "updated_at": "2026-11-05 16:42:26"
 }
