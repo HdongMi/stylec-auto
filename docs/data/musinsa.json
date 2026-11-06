@@ -208,6 +208,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 21
+  },
+  {
+   "started_at": "2026-11-06 16:39:23",
+   "finished_at": "2026-11-06 16:49:04",
+   "status": "success",
+   "listed": 246,
+   "ok": 23,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 21
   }
  ],
  "records": [
@@ -5870,7 +5881,237 @@
    "image": "https://image.msscdn.net/thumbnails/community/preuser/images/73783fd2-d108-11f1-885c-3df932867ce2.jpg",
    "img_checked": true,
    "note": "다크 네이비 / XXL"
+  },
+  {
+   "at": "2026-11-06 16:39:51",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "르아브 피트 패널 플리스 집업 차콜 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49595",
+   "image": "https://image.msscdn.net/images/2026/11/06/0b11e25c1c254826bbc57bf11891719c.jpg",
+   "img_checked": true,
+   "note": "블랙 / XL"
+  },
+  {
+   "at": "2026-11-06 16:40:12",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "비아모노 트루비 럭색 블랙 민트그레이 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49541",
+   "image": "https://storage001.daousync.com/v1/AUTH_c55e59a8ec2149e7ad5e61ca73645bd9/mw149014/image/1741917763816.jpg",
+   "img_checked": true,
+   "note": "트루비 럭색 (블랙) / FREE"
+  },
+  {
+   "at": "2026-11-06 16:40:28",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "케이스위스 비포 더 클래식 스니커즈 올블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49540",
+   "image": "https://s3.ap-northeast-2.amazonaws.com/k-swiss.co.kr/spec/AKSFLWV903AB_dp02.jpg",
+   "img_checked": true,
+   "note": "ALMOST BLACK / 280"
+  },
+  {
+   "at": "2026-11-06 16:40:43",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "모노프 볼륨톡스 립밤 체험단 50명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49539",
+   "image": "https://ecimg.cafe24img.com/pg248b13922100070/monoff/web/oy/color/3-.png",
+   "img_checked": true,
+   "note": "03 블러쉬 페탈"
+  },
+  {
+   "at": "2026-11-06 16:40:58",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "려 루트젠 볼류마이징 내추럴 볼륨픽서 150 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49537",
+   "image": "https://amc.apglobal.com/asset/384224417642/image_apnjdg3mhl6l78cbeg587i3530?content-disposition=inline",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-06 16:41:13",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "포플리 포플리 퍼퓸 향3종 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49534",
+   "image": "https://image.msscdn.net/images/prd_img/20250723165909958086511076880964de9e8d.jpg",
+   "img_checked": true,
+   "note": "포플리 비포데이팅 (No.2)"
+  },
+  {
+   "at": "2026-11-06 16:41:30",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "오오티디 뷰티 피디알엔 펩타이드 글래스 스킨 버블 토너 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49532",
+   "image": "https://ootdbeauty.cafe24.com/detail/02_Face-Care/OS_TO007-PDRN-PEPTIDE-GLASS-SKIN-BUBBLE-TONER/01.png",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-06 16:41:55",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "로브로브 마이 시그니처 니트 멜란지그레이 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49531",
+   "image": "https://lovlovseoul.cafe24.com/25FW/My%20Signature%20Knit/03.jpg",
+   "img_checked": true,
+   "note": "IVORY / FREE"
+  },
+  {
+   "at": "2026-11-06 16:42:11",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "츄바스코 퍼 클로그 엘리스 슬리퍼 베이지 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49529",
+   "image": "https://brandcode.hgodo.com/sc%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80/2026%EC%B8%84%EB%B0%94%EC%8A%A4%EC%BD%94/vc40915-336_01.jpg",
+   "img_checked": true,
+   "note": "280"
+  },
+  {
+   "at": "2026-11-06 16:42:25",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "츄바스코 퍼 클로그 엘리스 슬리퍼 블랙 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49528",
+   "image": "https://brandcode.hgodo.com/sc%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80/2026%EC%B8%84%EB%B0%94%EC%8A%A4%EC%BD%94/vc40915-001_01.jpg",
+   "img_checked": true,
+   "note": "280"
+  },
+  {
+   "at": "2026-11-06 16:42:40",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "익스트림 듀얼아르기닌 플러스 180정 3개월분 체험단 50명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49508",
+   "image": "https://image.msscdn.net/images/2026/10/21/0c6b2d3836874c199afb910705e4ea03.jpg",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-06 16:42:56",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "오오티디 뷰티 다크 스팟 비타민씨 세럼 미스트 체험단 30명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49507",
+   "image": "https://ootdbeauty.cafe24.com/detail/02_Face-Care/OS_MI001-Dark-Spot-Vitamin-C-serum-Mist/01.png",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-06 16:43:12",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "패러다임 필름 플리츠 뉴스보이 마린 캡  체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49503",
+   "image": "https://image.msscdn.net/images/2026/11/03/c80b6ac8e70b46e1ba7635088626d1d6.jpg",
+   "img_checked": true,
+   "note": "[Ep.04] 8-플리츠 뉴스보이 마린 캡 (블랙) / FREE"
+  },
+  {
+   "at": "2026-11-06 16:43:28",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "엠블룩 후디드 스웨트셔츠 큐빅러브 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49490",
+   "image": "https://image.msscdn.net/images/2026/10/22/a8a06d8652324cf2af18a5fcbde67eb1.jpg",
+   "img_checked": true,
+   "note": "블랙 / XL"
+  },
+  {
+   "at": "2026-11-06 16:43:46",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "노디 피스 워시드 필드 자켓 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49487",
+   "image": "https://image.msscdn.net/images/2026/11/04/af930dd815ae48e0aa15739ab6332612.jpg",
+   "img_checked": true,
+   "note": "[탈부착 내피 포함] 피스 워시드 M-65 필드 자켓 카키 / 3(L)"
+  },
+  {
+   "at": "2026-11-06 16:44:04",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "밀라코드 다이애거널 포켓 티 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49484",
+   "image": "https://image.msscdn.net/thumbnails/community/preuser/images/061b0c92-d65b-11f1-9dbc-357a52f2d881.jpg",
+   "img_checked": true,
+   "note": "Diagonal Pocket T-Shirt - CHARCOAL / XL"
+  },
+  {
+   "at": "2026-11-06 16:44:21",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "휠라 골프 클래식 패딩 머플러 체험단 50명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49313",
+   "image": "https://gi.esmplus.com/rexy3432/NEW_PRODUCT/FILA/CLASSIC_PADDED_MUFFLER/01.jpg",
+   "img_checked": true,
+   "note": "블랙 / FREE"
+  },
+  {
+   "at": "2026-11-06 16:44:37",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 트러커 5116 다크인디고 데님 재킷 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49194",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Outer/5116DI1.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-06 16:44:53",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 트러커 5116 미디움인디고 데님 재킷 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49193",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Outer/5116MI1.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-06 16:45:08",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "맥우드건 트러커 5115 포 레더 블랙 재킷 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49191",
+   "image": "https://magoodgancokr.speedgabia.com/Magoodgan/Product_01/Outer/5115BK1.jpg",
+   "img_checked": true,
+   "note": "L"
+  },
+  {
+   "at": "2026-11-06 16:45:22",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "프리크 아틀리에 오 드 퍼퓸 볼드 라임 체험단 10명 모집",
+   "url": "https://www.musinsa.com/preuser/events/49137",
+   "image": "https://image.msscdn.net/images/2026/09/28/1566a0adc8ce4379a8b5eebed74be064.png",
+   "img_checked": true,
+   "note": "FREE"
+  },
+  {
+   "at": "2026-11-06 16:45:39",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "리오므 실버에이징체인목걸이 레이어드체인목걸이 택1 5명 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48672",
+   "image": "https://image.msscdn.net/images/2026/10/14/4420d738b09a4dbc99bd22e49880867d.jpg",
+   "img_checked": true,
+   "note": "레이어드 체인 목걸이 / FREE (43+5cm) / 선물 패키지 추가"
+  },
+  {
+   "at": "2026-11-06 16:45:58",
+   "status": "ok",
+   "result": "OK (신청 완료)",
+   "title": "리오므 사일런스그레이목걸이 어코드오닉스목걸이 택1 5명 체험단 5명 모집",
+   "url": "https://www.musinsa.com/preuser/events/48671",
+   "image": "https://image.msscdn.net/images/2026/10/14/612dc578ce2749a0a0ceaf82e37209db.jpg",
+   "img_checked": true,
+   "note": "어코드 오닉스 목걸이 / L-50+5cm / 선물 패키지 추가"
   }
  ],
- "updated_at": "2026-11-05 16:42:26"
+ "updated_at": "2026-11-06 16:49:04"
 }
