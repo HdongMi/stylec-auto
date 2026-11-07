@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06 16:31:36",
+ "updated_at": "2026-11-07 15:44:53",
  "runs": [
   {
    "started_at": "2026-10-20 16:38:27",
@@ -236,6 +236,17 @@
   {
    "started_at": "2026-11-06 16:31:18",
    "finished_at": "2026-11-06 16:31:36",
+   "status": "login_expired",
+   "listed": 0,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 0
+  },
+  {
+   "started_at": "2026-11-07 15:44:36",
+   "finished_at": "2026-11-07 15:44:53",
    "status": "login_expired",
    "listed": 0,
    "ok": 0,
