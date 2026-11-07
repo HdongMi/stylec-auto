@@ -1,0 +1,1 @@
+{"site": "musinsa", "status": "success", "started_at": "2026-11-07 15:44:36", "total": 21, "done": 21, "current": "", "run": {"started_at": "2026-11-07 15:44:36", "finished_at": "2026-11-07 15:47:48", "status": "success", "listed": 244, "ok": 0, "check": 0, "manual": 0, "fail": 0, "skip": 21}, "records": [], "updated_at": "2026-11-07 15:47:48"}
