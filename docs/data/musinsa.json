@@ -230,6 +230,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 21
+  },
+  {
+   "started_at": "2026-11-08 15:51:00",
+   "finished_at": "2026-11-08 15:54:25",
+   "status": "success",
+   "listed": 244,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 21
   }
  ],
  "records": [
@@ -6124,5 +6135,5 @@
    "note": "어코드 오닉스 목걸이 / L-50+5cm / 선물 패키지 추가"
   }
  ],
- "updated_at": "2026-11-07 15:47:48"
+ "updated_at": "2026-11-08 15:54:25"
 }
