@@ -285,6 +285,17 @@
    "manual": 0,
    "fail": 0,
    "skip": 0
+  },
+  {
+   "started_at": "2026-11-13 10:22:02",
+   "finished_at": "2026-11-13 10:22:04",
+   "status": "no_list",
+   "listed": 0,
+   "ok": 0,
+   "check": 0,
+   "manual": 0,
+   "fail": 0,
+   "skip": 0
   }
  ],
  "records": [
@@ -7159,5 +7170,5 @@
    "note": "FREE"
   }
  ],
- "updated_at": "2026-11-12 16:53:15"
+ "updated_at": "2026-11-13 10:22:04"
 }
