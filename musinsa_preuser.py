@@ -69,7 +69,7 @@ DELAY_RANGE = (2, 4)
 
 # ============================================================
 
-VERSION = "v7"
+VERSION = "v8"
 
 BASE = Path(__file__).resolve().parent
 STATE_FILE = BASE / "musinsa_login.json"
@@ -305,15 +305,93 @@ def do_login(browser):
 # ------------------------------------------------------------
 # 1. 체험단 목록 (API)
 # ------------------------------------------------------------
-def fetch_events(ctx):
+FETCH_JS = """async (url) => {
+    const r = await fetch(url, {credentials: 'include', headers: {'Accept': 'application/json'}});
+    const t = await r.text();
+    return {status: r.status, ct: r.headers.get('content-type') || '', text: t};
+}"""
+
+
+def _parse(status, ct, text, how):
+    try:
+        return json.loads(text)
+    except Exception:
+        snippet = re.sub(r"\s+", " ", text or "")[:150]
+        log(f"    ({how}) JSON 아님 — HTTP {status}, {ct or '형식 없음'}, 내용: {snippet or '(비어 있음)'}")
+        return None
+
+
+def get_json(ctx, page, url):
+    """① 직접 요청 → ② 무신사 페이지 안에서 요청(브라우저와 똑같이) 순서로 시도."""
+    try:
+        r = ctx.request.get(url, headers={"Referer": MAIN_URL, "Accept": "application/json"})
+        data = _parse(r.status, r.headers.get("content-type", ""), r.text(), "직접 요청")
+        if data is not None:
+            return data
+    except Exception as e:
+        log(f"    (직접 요청) 실패: {str(e).splitlines()[0][:100]}")
+    try:
+        if "musinsa.com/preuser" not in page.url:
+            page.goto(MAIN_URL, wait_until="domcontentloaded")
+            nap(2, 3)
+        res = page.evaluate(FETCH_JS, url)
+        return _parse(res["status"], res["ct"], res["text"], "페이지 안 요청")
+    except Exception as e:
+        log(f"    (페이지 안 요청) 실패: {str(e).splitlines()[0][:100]}")
+    return None
+
+
+def sniff_events(page):
+    """마지막 방법: 체험단 메인 화면을 열고 스크롤하면서, 화면이 받아오는 목록 데이터를 그대로 모음."""
+    got = []
+
+    def on_resp(resp):
+        if "/preuser/" in resp.url and "event" in resp.url:
+            try:
+                d = resp.json()
+                c = (d.get("data") or {}).get("content") if isinstance(d, dict) else None
+                if isinstance(c, list):
+                    got.extend(c)
+            except Exception:
+                pass
+
+    page.on("response", on_resp)
+    page.goto(MAIN_URL, wait_until="domcontentloaded")
+    try:
+        page.wait_for_load_state("networkidle", timeout=15000)
+    except PWTimeout:
+        pass
+    last = -1
+    for _ in range(40):
+        page.mouse.wheel(0, 5000)
+        nap(1.2, 1.8)
+        if len(got) == last:
+            break
+        last = len(got)
+    page.remove_listener("response", on_resp)
+    try:
+        (LOG_DIR / "main_page.html").write_text(page.content(), encoding="utf-8")
+    except Exception:
+        pass
+    shot(page, "main_page")
+    return got
+
+
+def fetch_events(ctx, page):
     events, page_no = [], 1
     while page_no <= 50:
         params = [("page", page_no), ("size", 18)] + [("genders", g) for g in GENDERS] + [("sort", "LATEST_REGISTRATION")]
         qs = "&".join(f"{k}={v}" for k, v in params)
-        r = ctx.request.get(f"{LIST_API}?{qs}", headers={"Referer": MAIN_URL})
-        data = r.json().get("data", {})
-        events += data.get("content", [])
-        if not data.get("hasNext"):
+        data = get_json(ctx, page, f"{LIST_API}?{qs}")
+        if data is None:
+            if page_no == 1:
+                log("목록 주소로 못 받아서, 체험단 화면을 직접 열어 목록을 읽습니다.")
+                events = sniff_events(page)
+                log(f"화면에서 {len(events)}개 읽음")
+            break
+        d = data.get("data", {}) if isinstance(data, dict) else {}
+        events += d.get("content", []) or []
+        if not d.get("hasNext"):
             break
         page_no += 1
         nap(0.5, 1)
@@ -659,9 +737,15 @@ def main():
         log(f"[버전 {VERSION}] 로그인 확인 OK")
 
         try:
-            events = fetch_events(ctx)
+            events = fetch_events(ctx, page)
         except Exception as e:
             log(f"체험단 목록을 가져오지 못했습니다: {e}")
+            close_run("no_list")
+            browser.close()
+            return 1
+
+        if not events:
+            log("체험단 목록이 비어 있습니다. logs 폴더의 main_page.png 를 확인해 주세요.")
             close_run("no_list")
             browser.close()
             return 1
