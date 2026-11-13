@@ -54,15 +54,22 @@ RING_SIZE = 21
 # 색상/상품 선호 (여러 색상·상품 중 고를 때). 없으면 첫 번째 것을 고릅니다.
 PREFERRED_OPTIONS = ["블랙", "BLACK", "네이비", "NAVY"]
 
-# 이름에 이 단어가 들어간 체험단은 건너뜀 (예: ["키즈", "[샘플]"]). 비워두면 전부 신청
-EXCLUDE_KEYWORDS = []
+# 체험단 이름이나 상품명에 이 단어가 들어가면 신청하지 않음 (스타일씨와 같은 목록, 쉼표 구분)
+# 여성 제품 / 아이 / 반려동물 / 책 / 강의 / 어학
+EXCLUDE = (
+    "여성,여자,우먼,레이디,woman,women,lady,생리대,브라렛,브래지어,원피스,스커트,"
+    "키즈,유아,아동,어린이,베이비,baby,kids,주니어,토들러,신생아,"
+    "반려,강아지,고양이,애견,애묘,펫푸드,펫용품,펫샵,댕댕,"
+    "도서,서적,교재,문제집,참고서,동화책,그림책,소설,에세이,독서,[책],"
+    "인강,인터넷강의,온라인강의,강의,수강,클래스,일본어,중국어,JLPT,HSK")
+EXCLUDE_KEYWORDS = [k.strip() for k in EXCLUDE.split(",") if k.strip()]
 
 # 체험단 사이 대기 시간(초)
 DELAY_RANGE = (2, 4)
 
 # ============================================================
 
-VERSION = "v6"
+VERSION = "v7"
 
 BASE = Path(__file__).resolve().parent
 STATE_FILE = BASE / "musinsa_login.json"
@@ -287,6 +294,7 @@ def do_login(browser):
         if is_logged_in(ctx):
             ctx.storage_state(path=str(STATE_FILE))
             log("로그인 확인 완료! 로그인 정보를 저장했습니다.")
+            print("GitHub 자동 실행용으로는 이어서 'python musinsa_preuser.py --export-session' 을 실행하세요.")
             ctx.close()
             return True
     log("5분 안에 로그인이 확인되지 않았습니다. 다시 시도해 주세요.")
@@ -309,15 +317,21 @@ def fetch_events(ctx):
             break
         page_no += 1
         nap(0.5, 1)
-    # 중복 제거 + 모집 중인 것만
-    seen, result = set(), []
+    # 중복 제거 + 모집 중인 것만 + 제외 키워드
+    seen, result, excluded = set(), [], []
     for e in events:
         if e["id"] in seen or e.get("state") != "OPEN":
             continue
         seen.add(e["id"])
-        if any(k in e["name"] for k in EXCLUDE_KEYWORDS):
+        text = (e.get("name", "") + " " + " ".join(pr.get("name", "") for pr in e.get("products", []) or [])).lower()
+        hit = [k for k in EXCLUDE_KEYWORDS if k.lower() in text]
+        if hit:
+            excluded.append((e.get("name", ""), hit[0]))
             continue
         result.append(e)
+    if excluded:
+        log(f"제외 키워드로 {len(excluded)}개 건너뜀: " +
+            ", ".join(f"{n[:20]}({k})" for n, k in excluded[:15]) + (" ..." if len(excluded) > 15 else ""))
     return result
 
 
@@ -637,7 +651,8 @@ def main():
 
         page.goto(MAIN_URL, wait_until="domcontentloaded")
         if not is_logged_in(ctx):
-            log("로그인이 풀렸습니다. 'python musinsa_preuser.py --login' 을 다시 실행하세요.")
+            log("로그인이 풀렸습니다. 'python musinsa_preuser.py --login' 을 다시 실행하세요."
+            + (" (GitHub 자동 실행이면 이어서 --export-session 후 MUSINSA_SESSION 시크릿 갱신)" if args.storage_state else ""))
             close_run("login_expired")
             browser.close()
             return 2
