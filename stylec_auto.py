@@ -38,6 +38,10 @@ DEFAULT_LIST_URL = (
     "&category=&region=&sns=&include_finish=false"
 )
 DEFAULT_TYPES = "제공형"
+# 제목에 이 단어가 들어간 체험단은 신청하지 않음 (쉼표 구분). --exclude 로 더 추가할 수 있음
+DEFAULT_EXCLUDE = ("여성,여자,우먼,레이디,woman,women,lady,생리대,브라렛,브래지어,원피스,스커트,"
+                   "도서,서적,교재,문제집,참고서,동화책,그림책,소설,에세이,독서,[책],"
+                   "인강,인터넷강의,온라인강의,강의,수강,클래스,일본어,중국어,JLPT,HSK")
 LIST_MARKER = "다른 체험단도 둘러볼까요"
 PROFILE_DIR = Path("stylec_profile")
 LOG_FILE = Path("applied_log.json")
@@ -305,7 +309,11 @@ def collect_campaigns(page, list_url, debug=False, max_pages=20):
         if "json" in resp.headers.get("content-type", ""):
             api_hits.append(resp.url)
         if "/v1/trial?" in resp.url:
-            captured.append(resp)
+            try:
+                data = resp.json()          # 페이지가 넘어가기 전에 바로 읽어둠
+            except Exception:
+                data = None
+            captured.append((resp, data))
 
     page.on("response", on_response)
     page.goto(list_url, wait_until="domcontentloaded")
@@ -317,11 +325,11 @@ def collect_campaigns(page, list_url, debug=False, max_pages=20):
     page.remove_listener("response", on_response)
 
     # 우리가 연 목록(같은 page/count)에 해당하는 응답만 사용 — 배달형·방문형 추천 목록은 제외
-    target = None
-    for r in captured:
+    target, target_data = None, None
+    for r, data in captured:
         q = parse_qs(urlparse(r.url).query)
         if (q.get("page") or [""])[0] == want_page and (not want_count or (q.get("count") or [""])[0] == want_count):
-            target = r
+            target, target_data = r, data
             break
 
     template, sample_link = detect_detail_template(page)
@@ -329,9 +337,12 @@ def collect_campaigns(page, list_url, debug=False, max_pages=20):
     items = []
     if target:
         try:
-            items = find_item_list(target.json())
+            data = target_data
+            if data is None:                 # 응답 시점에 못 읽었으면 같은 주소로 다시 요청
+                data = page.request.get(target.url).json()
+            items = find_item_list(data)
         except Exception as e:
-            print(f"  ※ 목록 데이터를 읽지 못함: {e}")
+            print(f"  ※ 목록 데이터를 읽지 못함: {str(e).splitlines()[0]}")
 
     # 다음 페이지들은 같은 목록 데이터 주소에 page 번호만 바꿔 직접 요청 (끝까지)
     if target and items:
@@ -370,8 +381,10 @@ def collect_campaigns(page, list_url, debug=False, max_pages=20):
         if url in seen:
             continue
         seen.add(url)
+        cat = " ".join(str(v) for k, v in it.items()
+                       if isinstance(v, str) and re.search(r"categ|type|tag|keyword", k, re.I))
         campaigns.append({"url": url, "title": str(title or "")[:120], "image": pick_image(it),
-                          "channels": item_channels(it)})
+                          "channels": item_channels(it), "cat": cat[:200]})
 
     if debug:
         print("\n[debug] JSON 응답 URL:")
@@ -575,6 +588,11 @@ def backfill_images(page, hist, path, limit=80):
 
 def apply_one(page, camp, args):
     # 리뷰 채널 확인 ① 목록 데이터의 채널 정보와 제목 — 블로그가 아니면 페이지를 열지 않고 건너뜀
+    # 제외 키워드: 제목·카테고리에 있으면 페이지를 열지 않고 건너뜀
+    hit = [k for k in args.exclude if k.lower() in (camp.get("title", "") + " " + camp.get("cat", "")).lower()]
+    if hit:
+        return f"skip:제외 키워드({hit[0]})"
+
     blog_ok = not args.sns
     if args.sns:
         v_list, f_list = channel_verdict(camp.get("channels", ""), args.sns)
@@ -598,7 +616,7 @@ def apply_one(page, camp, args):
     if not camp["title"]:
         camp["title"] = (page.title() or "")[:120]
 
-    if not keyword_ok(camp["title"] + " " + body[:3000], args.include, args.exclude):
+    if not keyword_ok(camp["title"] + " " + body[:3000], args.include, []):
         return "skip:키워드 필터"
 
     # 체험단 유형 확인 (상단 메뉴·하단 정보 글자는 빼고 본문에서만 확인)
@@ -680,7 +698,7 @@ def main():
     ap.add_argument("--max", type=int, default=20, help="이번 실행에서 최대 신청 개수")
     ap.add_argument("--delay", type=float, default=6.0, help="체험단 사이 대기 시간(초)")
     ap.add_argument("--include", default="", help="포함 키워드(쉼표 구분) — 하나라도 있어야 신청")
-    ap.add_argument("--exclude", default="", help="제외 키워드(쉼표 구분)")
+    ap.add_argument("--exclude", default="", help="제외 키워드(쉼표 구분) — 기본 제외 목록(DEFAULT_EXCLUDE)에 추가됨")
     ap.add_argument("--message", default="", help="신청서의 빈 텍스트칸에 넣을 문구")
     ap.add_argument("--sns", default=DEFAULT_SNS,
                     help="이 채널로 리뷰를 쓸 수 있는 체험단만 신청 (쉼표 구분, 기본: 블로그). 빈 값이면 채널 상관없이 신청")
@@ -689,7 +707,7 @@ def main():
     args = ap.parse_args()
 
     args.include = [k.strip() for k in args.include.split(",") if k.strip()]
-    args.exclude = [k.strip() for k in args.exclude.split(",") if k.strip()]
+    args.exclude = [k.strip() for k in (DEFAULT_EXCLUDE + "," + args.exclude).split(",") if k.strip()]
     args.types = [k.strip() for k in args.types.split(",") if k.strip()]
     args.sns = [k.strip() for k in args.sns.split(",") if k.strip()]
 
@@ -728,7 +746,11 @@ def main():
         if args.login:
             page.goto(BASE + "/auth/login")
             input("브라우저에서 로그인을 마친 뒤 여기서 Enter 를 누르세요...")
-            print("로그인 세션을 저장했습니다.")
+            if is_logged_in(page):
+                print("로그인 확인 완료! 세션을 저장했습니다.")
+                print("GitHub 자동 실행용으로는 이어서 'python stylec_auto.py --export-session' 을 실행하세요.")
+            else:
+                print("※ 로그인이 확인되지 않습니다. 다시 --login 을 실행해 로그인해 주세요.")
             return finish()
 
         if args.export_session:
@@ -761,8 +783,11 @@ def main():
                 hist["runs"].append(run)
                 save_history(args.history, hist)
 
-        if args.apply and not is_logged_in(page):
-            print("fail:로그인 만료 — session_b64.txt 다시 내보내서 STYLEC_SESSION 갱신 필요")
+        if not is_logged_in(page):
+            if args.storage_state:
+                print("fail:로그인 만료 — session_b64.txt 다시 내보내서 STYLEC_SESSION 갱신 필요")
+            else:
+                print("로그인이 풀렸습니다. 'python stylec_auto.py --login' 으로 다시 로그인하세요.")
             close_run("login_expired")
             return finish(2)
 
